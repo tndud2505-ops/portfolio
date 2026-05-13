@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김수영 | Automotive Embedded Software Engineer</title>
+    <meta
+      name="description"
+      content="자동차 임베디드 SW, AUTOSAR, MBD, 기능안전, 모터 제어, 검증 자동화 경험을 정리한 김수영의 포트폴리오 사이트"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#top">
+          <span class="brand-kicker">AUTOMOTIVE + AUTOMATION</span>
+          <span class="brand-name">김수영 Portfolio</span>
+        </a>
+        <nav class="topnav">
+          <a href="#summary">Summary</a>
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#channels">Channels</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Automotive Embedded Software Engineer</p>
+            <h1>자동차 제어기 실무와<br />검증 자동화를 함께 해온 개발자</h1>
+            <p class="hero-body">
+              AUTOSAR, MBD, 기능안전, BLDC/PMSM/DC 모터 제어를 실무에서 수행했고,
+              최근에는 Python 기반 코드 생성과 검증 자동화까지 확장하고 있습니다.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="./김수영_통합_포트폴리오_최종본.docx">포트폴리오 DOCX 보기</a>
+              <a class="button secondary" href="#projects">대표 프로젝트 보기</a>
+            </div>
+            <ul class="hero-metrics">
+              <li>
+                <strong>4년+</strong>
+                <span>자동차 임베디드 SW</span>
+              </li>
+              <li>
+                <strong>4회+</strong>
+                <span>양산 경험</span>
+              </li>
+              <li>
+                <strong>AUTOSAR</strong>
+                <span>코드 생성 / 검증 자동화</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <img src="./assets/diagram_bldc_motor_operation.png" alt="BLDC 모터 동작 원리 설명 도해" />
+          </div>
+        </section>
+
+        <section id="summary" class="section section-summary">
+          <div class="section-head">
+            <p class="section-label">SUMMARY</p>
+            <h2>실무 기반 강점</h2>
+          </div>
+          <div class="summary-grid">
+            <article class="summary-card">
+              <h3>제어 원리 이해</h3>
+              <p>
+                BLDC/PMSM/DC 모터 제어를 단순 기능 구현이 아니라 자기장 전환, 위치 추정, STALL 대응, PI 제어,
+                보호 로직 관점에서 다뤄왔습니다.
+              </p>
+            </article>
+            <article class="summary-card">
+              <h3>AUTOSAR / MBD 실무</h3>
+              <p>
+                SCM, PSU, 통합제어기, AUTOSAR, MATLAB/Simulink, 기능안전 요구사항까지 포함한 제어기 개발 문맥을
+                경험했습니다.
+              </p>
+            </article>
+            <article class="summary-card">
+              <h3>검증 자동화</h3>
+              <p>
+                ARXML 분석, Python 툴링, WSL/GCC 검증 환경, 반복 생성 작업 자동화까지 연결하며 생산성과 품질을
+                함께 높이는 방향으로 확장하고 있습니다.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section timeline">
+          <div class="section-head">
+            <p class="section-label">CAREER</p>
+            <h2>커리어 타임라인</h2>
+          </div>
+          <div class="timeline-list">
+            <article class="timeline-item">
+              <span class="timeline-period">2026.01 ~ 현재</span>
+              <h3>MOBASE ASEC</h3>
+              <p>아키텍처 설계실 · AUTOSAR 코드 생성 / 검증 자동화</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-period">2023.10 ~ 2026.01</span>
+              <h3>LS Automotive</h3>
+              <p>전장 SW 설계팀 · SCM / PSU / 통합제어기 · 기능안전 대응</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-period">2022.03 ~ 2023.06</span>
+              <h3>동아전기부품</h3>
+              <p>회로2팀 SW담당 · 냉매 밸브 액추에이터 제어</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="work" class="section work-section">
+          <div class="section-head">
+            <p class="section-label">WORK PROJECTS</p>
+            <h2>실무 프로젝트</h2>
+          </div>
+
+          <article class="feature-block">
+            <div class="feature-copy">
+              <h3>동아전기부품 · 냉매 밸브 액추에이터 제어</h3>
+              <p>
+                차량 냉매 흐름을 제어하는 액추에이터용 SW를 개발하며, 모터 구동 원리와 제어 이론을 실제 제품
+                동작과 양산 대응에 연결한 경험입니다.
+              </p>
+              <ul>
+                <li>1세대 양산, 2세대 양산, PT 센서 액추에이터 선행까지 이어지는 흐름</li>
+                <li>역기전력 기반 위치 판단, STALL 대응, PI 제어, 6개 FET 제어</li>
+                <li>반도체 수급 이슈에 따른 MCU 변경 및 재설계 대응</li>
+              </ul>
+            </div>
+            <div class="feature-media split-stack">
+              <img src="./assets/dev_summary_page_01.png" alt="액추에이터 개발 요약 PDF 페이지" />
+              <img src="./assets/diagram_bldc_motor_operation.png" alt="BLDC 모터 동작 원리 도해" />
+            </div>
+          </article>
+
+          <article class="feature-block reverse">
+            <div class="feature-copy">
+              <h3>LS Automotive · SCM / PSU / 통합제어기</h3>
+              <p>
+                SCM, PSU, 통합제어기 선행 과제를 수행하며 사용자 편의 제어, AUTOSAR 기반 개발, 문서화,
+                기능안전 대응을 함께 다룬 프로젝트입니다.
+              </p>
+              <ul>
+                <li>SCM Platform 1.0 3개 차종 양산 대응</li>
+                <li>SCM Platform 2.0 1개 차종 양산 및 1개 차종 개발</li>
+                <li>PSU 2개 차종 대응, 기능 구현, 기능안전 리더 역할</li>
+              </ul>
+            </div>
+            <div class="feature-media split-stack">
+              <img src="./assets/dev_summary_page_02.png" alt="BODY 제어기 개발 요약 PDF 페이지" />
+              <img src="./assets/diagram_mobase_autosar_pipeline.png" alt="AUTOSAR 코드 생성 및 검증 자동화 개념도" />
+            </div>
+          </article>
+        </section>
+
+        <section id="projects" class="section project-section">
+          <div class="section-head">
+            <p class="section-label">CURRENT / PERSONAL PROJECTS</p>
+            <h2>현재 프로젝트와 대표 개인 프로젝트</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card project-card-wide">
+              <div class="project-text">
+                <span class="project-tag">Featured</span>
+                <h3>KIWOM</h3>
+                <p>
+                  추천 엔진과 자동매매 실행 엔진을 분리하고, readiness 체크와 운영 로그를 통해 잘못된 주문을
+                  방지하는 추천·분석·자동매매 운영 워크벤치입니다.
+                </p>
+                <ul>
+                  <li>React 기반 KIWOMWEB + FastAPI API 구조</li>
+                  <li>스캔, 추천, 종목 상세, 자동매매 상태를 하나의 워크벤치로 연결</li>
+                  <li>운영 철학과 안전장치를 문서와 로그로 증빙</li>
+                </ul>
+              </div>
+              <div class="project-gallery three-up">
+                <img src="./assets/kiwom_scan_overview.png" alt="KIWOM 전체 스캔 화면" />
+                <img src="./assets/kiwom_stock_detail_rs.png" alt="KIWOM 종목 상세 분석 화면" />
+                <img src="./assets/kiwom_autotrade_positions.png" alt="KIWOM 자동매매 운영 화면" />
+              </div>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Embedded Education</span>
+              <h3>Virtual MCU Training Environment</h3>
+              <p>
+                학생 펌웨어를 Web Worker에서 실행하면서, UART 입력부터 모터 피드백까지 연결해 학습할 수 있는
+                교육용 임베디드 시뮬레이터입니다.
+              </p>
+              <img src="./assets/virtual_mcu_home.png" alt="Virtual MCU 메인 화면" />
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Remote Operations</span>
+              <h3>Discord Agent</h3>
+              <p>
+                Discord 채널에서 로컬 Codex 프로젝트를 제어하고, 세션 재개, 승인 UI, 큐잉, 미디어 업로드까지
+                연결한 원격 협업 컨트롤러입니다.
+              </p>
+              <img src="./assets/discord_agent_panel_kr.png" alt="Discord Agent 패널 화면" />
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Browser Automation</span>
+              <h3>Site Auto</h3>
+              <p>
+                Chrome Extension 사이드패널에서 DOM snapshot을 저장하고 replay / repair / permission recovery를
+                통해 실제 탭 자동화를 수행하는 로컬 UI-first MVP입니다.
+              </p>
+              <img src="./assets/site_auto_panel.png" alt="Site Auto 사이드패널 화면" />
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Testing Workbench</span>
+              <h3>Site Security Check</h3>
+              <p>
+                경로 기반 시나리오를 마우스 리플레이 가능한 액션으로 변환하고, 실제 브라우저 세션에서
+                <code>isTrusted</code> 동작까지 검증하는 Playwright 기반 워크벤치입니다.
+              </p>
+              <img src="./assets/mouse_replay_home.png" alt="Mouse Replay Workbench 화면" />
+            </article>
+          </div>
+        </section>
+
+        <section id="channels" class="section channels-section">
+          <div class="section-head">
+            <p class="section-label">CHANNEL STRATEGY</p>
+            <h2>채널별 운영 전략</h2>
+          </div>
+          <div class="channel-grid">
+            <article>
+              <h3>사람인</h3>
+              <p>실제 추가 항목 기준으로 경력기술서, 자기소개서, 포트폴리오 문서와 URL 등록을 우선합니다.</p>
+            </article>
+            <article>
+              <h3>잡코리아</h3>
+              <p>실제 이력서 항목 기준으로 경력, 희망 직무, 스킬, 자기소개서, 포트폴리오 연결성을 맞춰 운영합니다.</p>
+            </article>
+            <article>
+              <h3>리멤버</h3>
+              <p>공개 보도와 서비스 성격을 바탕으로 압축형 헤드라인, 경력 요약, 키워드 중심 전략으로 운영합니다.</p>
+            </article>
+            <article>
+              <h3>LinkedIn</h3>
+              <p>실제 프로필 섹션 기준으로 Headline, About, Experience, Featured, Skills를 영문 중심으로 정리합니다.</p>
+            </article>
+            <article>
+              <h3>네이버 블로그</h3>
+              <p>프로젝트별 장문 기록과 검색 유입을 담당하는 아카이브 채널로 운영합니다.</p>
+            </article>
+          </div>
+          <p class="section-note">사람인, 잡코리아, LinkedIn 항목 구조는 공식 도움말 기준으로 다시 확인했고, 리멤버는 공개 서비스 특성을 바탕으로 운영 전략 수준에서 정리했습니다.</p>
+          <div class="channel-links">
+            <a href="./채널별_업로드_전략.md">채널별 업로드 전략 보기</a>
+            <a href="./채널별_복붙_원고.md">채널별 복붙 원고 보기</a>
+            <a href="./플랫폼_근거_메모.md">플랫폼 근거 메모 보기</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>김수영 · Automotive Embedded Software Engineer</p>
+        <p>문서 원본과 채널별 원고는 final_portfolio_package 안에 함께 정리되어 있습니다.</p>
+      </footer>
+    </div>
+  </body>
+</html>
