@@ -34,9 +34,7 @@
 
         <nav class="toc" aria-label="목차">
           <a href="#intro">소개</a>
-          <a href="#selected">선별 프로젝트</a>
-          <a href="#work">실무 아카이브</a>
-          <a href="#personal">개인 프로젝트 브라우저</a>
+          <a href="#modes">커리어 / 개인 프로젝트</a>
           <a href="#archive">문서 아카이브</a>
         </nav>
 
@@ -46,7 +44,7 @@
       <main id="content" class="page-main">
         <section id="intro" class="intro">
           <p class="eyebrow">Automotive embedded software engineer</p>
-          <h2 class="intro-title">이력서를 다시 옮겨 적는 대신, 실제로 해온 프로젝트를 구조와 판단 중심으로 정리했습니다.</h2>
+          <h2 class="intro-title">이력서를 다시 옮겨 적는 대신, 실제로 해온 프로젝트를 이해와 구조 중심으로 다시 정리했습니다.</h2>
 
           <div class="intro-copy">
             <p>
@@ -68,289 +66,230 @@
           </div>
         </section>
 
-        <section id="selected" class="section">
-          <div class="section-head">
-            <p class="section-label">Selected projects</p>
-            <h2>먼저 보면 좋은 세 개의 축</h2>
-          </div>
-
-          <div class="selected-list">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>동아전기부품 액추에이터 제어</h3>
-                <p>모터가 실제 제품 목적과 연결되는 순간을 경험한 프로젝트입니다. 위치 제어, zero crossing 판단, STALL 대응처럼 제어의 밀도가 높은 구간이 여기서 시작됐습니다.</p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>LS Automotive 바디 제어기</h3>
-                <p>SCM, PSU, 통합제어기 선행 과제를 거치며 차종 대응, 양산 이슈, 기능안전, 문서와 구현의 정합성을 함께 다뤘습니다.</p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>MOBASE ASEC 자동화 흐름</h3>
-                <p>기능 개발 경험이 개발 생산성으로 이어지는 지점입니다. 반복 작업을 줄이고 검증을 구조화하는 방향으로 확장한 현재의 축입니다.</p>
-              </div>
-            </article>
+        <section id="modes" class="mode-switcher">
+          <div class="mode-tabs" role="tablist" aria-label="아카이브 구분">
+            <button class="mode-tab is-active" type="button" role="tab" aria-selected="true" data-mode="career">커리어</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="personal">개인 프로젝트</button>
           </div>
         </section>
 
-        <section id="work" class="section">
-          <div class="section-head">
-            <p class="section-label">Work archive</p>
-            <h2>실무 아카이브</h2>
-          </div>
-
-          <article class="case-study">
-            <div class="case-index">01</div>
-            <div class="case-content">
-              <p class="case-company">동아전기부품</p>
-              <h3>센서형 히트펌프 액추에이터</h3>
-              <p class="case-summary">PMSM 모터와 기어를 통해 액추에이터를 움직이고, 냉매 유로를 바꿔 히트펌프 시스템의 온도 제어에 연결되는 구조를 다뤘습니다.</p>
-              <div class="case-text">
-                <p>핵심은 단순 구동이 아니라 목표 위치에 정확히 도달하고 멈추는 것이었습니다. 상전환, 목표 위치 정지, STALL 감지, 재시도 로직을 직접 맡으며 제어 흐름 전체를 다뤘습니다.</p>
-                <p>제어 이론을 실제 제품 목적과 양산 대응으로 연결한 첫 실무 경험이었습니다. 냉매 유량 제어라는 시스템 목표와 펌웨어 구현을 하나로 묶어 본 경험입니다.</p>
-              </div>
-              <ul class="case-tags">
-                <li>목표 각도 기반 위치 제어</li>
-                <li>PMSM 상전환과 정지 타이밍</li>
-                <li>STALL 감지와 재시도</li>
-              </ul>
+        <section class="mode-panel is-active" data-mode="career">
+          <section class="section">
+            <div class="section-head">
+              <p class="section-label">Selected projects</p>
+              <h2>먼저 보면 좋은 세 개의 축</h2>
             </div>
-          </article>
 
-          <article class="case-study">
-            <div class="case-index">02</div>
-            <div class="case-content">
-              <p class="case-company">동아전기부품</p>
-              <h3>센서리스 PT 액추에이터</h3>
-              <p class="case-summary">센서 없이도 모터 상태를 읽어야 하는 구조에서 역기전력과 zero crossing 판단으로 액추에이터를 원하는 위치까지 제어하는 선행 과제를 수행했습니다.</p>
-              <div class="case-text">
-                <p>초기 상전환, zero crossing 판단, sensorless 제어 유지, STALL 감지, 재시도와 목표 위치 정지까지 상태 흐름을 직접 다뤘습니다. 센서가 없을수록 로직의 밀도가 올라간다는 걸 실무로 겪었습니다.</p>
-                <p>단순 드라이버 디버깅이 아니라, 센서리스 제어에서 어떤 신호를 어떻게 해석해 상태 판단으로 이어가는지를 이해하고 구현한 경험이라는 점에서 중요한 프로젝트입니다.</p>
-              </div>
-              <ul class="case-tags">
-                <li>zero crossing 판단</li>
-                <li>sensorless 위치 추정 흐름</li>
-                <li>비정상 구간 보호와 복구 설계</li>
-              </ul>
+            <div class="selected-list">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3>동아전기부품 액추에이터 제어</h3>
+                  <p>모터가 실제 제품 목적과 연결되는 순간을 경험한 프로젝트입니다. 위치 제어, zero crossing 판단, STALL 대응처럼 제어의 밀도가 높은 구간이 여기서 시작됐습니다.</p>
+                </div>
+              </article>
+              <article>
+                <span>02</span>
+                <div>
+                  <h3>LS Automotive 바디 제어기</h3>
+                  <p>SCM, PSU, 통합제어기 선행 과제를 거치며 차종 대응, 양산 이슈, 기능안전, 문서와 구현의 정합성을 함께 다뤘습니다.</p>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <h3>MOBASE ASEC 자동화 흐름</h3>
+                  <p>기능 개발 경험이 개발 생산성으로 이어지는 지점입니다. 반복 작업을 줄이고 검증을 구조화하는 방향으로 확장한 현재의 축입니다.</p>
+                </div>
+              </article>
             </div>
-          </article>
+          </section>
 
-          <article class="case-study">
-            <div class="case-index">03</div>
-            <div class="case-content">
-              <p class="case-company">LS Automotive</p>
-              <h3>SCM과 차종별 양산 대응</h3>
-              <p class="case-summary">조향 컬럼 위치 제어와 easy-exit, 메모리 위치 복원 같은 편의 기능이 실제 제어기 구조로 어떻게 연결되는지 다뤘습니다.</p>
-              <div class="case-text">
-                <p>SCM은 기능 하나를 구현하는 문제보다 차종과 플랫폼에 따라 요구사항을 구조화하고 양산 단계 이슈를 디버깅하는 문제가 더 컸습니다. AUTOSAR Mobile Gene, MATLAB/Simulink, 모델 기반 설계 흐름을 실무에 붙여 본 경험입니다.</p>
-                <p>제어 대상이 커지면서 시스템 관점이 중요해지는 구간이었습니다. 차종별 대응, 양산 이슈, 실제 사용자 체감 품질이 모두 소프트웨어 구조와 연결되는 경험을 쌓았습니다.</p>
-              </div>
-              <ul class="case-tags">
-                <li>SCM Platform 1.0 / 2.0 대응</li>
-                <li>차종별 사양 해석과 구조화</li>
-                <li>양산 단계 디버깅과 품질 대응</li>
-              </ul>
+          <section class="section">
+            <div class="section-head">
+              <p class="section-label">Work archive</p>
+              <h2>실무 아카이브</h2>
             </div>
-          </article>
 
-          <article class="case-study">
-            <div class="case-index">04</div>
-            <div class="case-content">
-              <p class="case-company">LS Automotive</p>
-              <h3>PSU와 기능안전 문맥</h3>
-              <p class="case-summary">Power Seat Unit에서는 시트 위치 제어 그 자체보다, 안전 요구사항과 진단·fail-safe 구조를 실제 개발 흐름에 넣는 경험이 중요했습니다.</p>
-              <div class="case-text">
-                <p>ASIL-A 수준 요구사항을 반영하면서 디버깅, 기능 구현, 진단 및 fail-safe 로직, 그리고 SCD와 SDD 같은 산출물 작성을 함께 다뤘습니다. 코드와 문서가 같은 의미를 가져야 하는 프로젝트였습니다.</p>
-                <p>정상 동작을 만드는 것만으로는 충분하지 않았습니다. 어떤 고장을 진단 대상으로 볼지, 실패 시 어떤 안전 상태로 들어갈지, 그 판단을 문서와 구현 모두에서 설명 가능해야 했습니다.</p>
+            <article class="case-study">
+              <div class="case-index">01</div>
+              <div class="case-content">
+                <p class="case-company">동아전기부품</p>
+                <h3>센서형 히트펌프 액추에이터</h3>
+                <p class="case-summary">PMSM 모터와 기어를 통해 액추에이터를 움직이고, 냉매 유로를 바꿔 히트펌프 시스템의 온도 제어에 연결되는 구조를 다뤘습니다.</p>
+                <div class="case-text">
+                  <p>핵심은 단순 구동이 아니라 목표 위치에 정확히 도달하고 멈추는 것이었습니다. 상전환, 목표 위치 정지, STALL 감지, 재시도 로직을 직접 맡으며 제어 흐름 전체를 다뤘습니다.</p>
+                  <p>제어 이론을 실제 제품 목적과 양산 대응으로 연결한 첫 실무 경험이었습니다. 냉매 유량 제어라는 시스템 목표와 펌웨어 구현을 하나로 묶어 본 경험입니다.</p>
+                </div>
+                <ul class="case-tags">
+                  <li>목표 각도 기반 위치 제어</li>
+                  <li>PMSM 상전환과 정지 타이밍</li>
+                  <li>STALL 감지와 재시도</li>
+                </ul>
               </div>
-              <ul class="case-tags">
-                <li>안전 요구사항 동시 반영</li>
-                <li>진단 항목과 fail-safe</li>
-                <li>문서와 구현의 정합성</li>
-              </ul>
-            </div>
-          </article>
+            </article>
 
-          <article class="case-study">
-            <div class="case-index">05</div>
-            <div class="case-content">
-              <p class="case-company">LS Automotive</p>
-              <h3>통합제어기 선행 구조화</h3>
-              <p class="case-summary">시트, 램프, 카메라 모니터링과 여러 액추에이터 상태를 하나의 제어기 문맥 안에서 묶고 명령 흐름으로 연결하는 선행 과제에 참여했습니다.</p>
-              <div class="case-text">
-                <p>이 프로젝트의 본질은 특정 기능 구현이 아니라 구조 정의였습니다. 여러 입력과 기능을 하나의 제어기 안에서 어떻게 나누고, 어떤 인터페이스와 이벤트 흐름으로 연결할지 검토하는 일이 중심이었습니다.</p>
-                <p>즉시 눈에 보이는 기능보다 제어기 아키텍처 감각을 키워준 경험이었습니다. 이후 양산 가능성을 고려해 구조를 먼저 정리하는 선행 개발의 무게를 이해하게 된 프로젝트입니다.</p>
+            <article class="case-study">
+              <div class="case-index">02</div>
+              <div class="case-content">
+                <p class="case-company">동아전기부품</p>
+                <h3>센서리스 PT 액추에이터</h3>
+                <p class="case-summary">센서 없이도 모터 상태를 읽어야 하는 구조에서 역기전력과 zero crossing 판단으로 액추에이터를 원하는 위치까지 제어하는 선행 과제를 수행했습니다.</p>
+                <div class="case-text">
+                  <p>초기 상전환, zero crossing 판단, sensorless 제어 유지, STALL 감지, 재시도와 목표 위치 정지까지 상태 흐름을 직접 다뤘습니다. 센서가 없을수록 로직의 밀도가 올라간다는 걸 실무로 겪었습니다.</p>
+                  <p>단순 드라이버 디버깅이 아니라, 센서리스 제어에서 어떤 신호를 어떻게 해석해 상태 판단으로 이어가는지를 이해하고 구현한 경험이라는 점에서 중요한 프로젝트입니다.</p>
+                </div>
+                <ul class="case-tags">
+                  <li>zero crossing 판단</li>
+                  <li>sensorless 위치 추정 흐름</li>
+                  <li>비정상 구간 보호와 복구 설계</li>
+                </ul>
               </div>
-              <ul class="case-tags">
-                <li>다수 기능 통합 구조 검토</li>
-                <li>인터페이스와 이벤트 흐름</li>
-                <li>선행 단계 구조 검증</li>
-              </ul>
-            </div>
-          </article>
+            </article>
 
-          <article class="case-study">
-            <div class="case-index">06</div>
-            <div class="case-content">
-              <p class="case-company">MOBASE ASEC</p>
-              <h3>AUTOSAR 코드 생성과 검증 자동화</h3>
-              <p class="case-summary">AUTOSAR ARXML을 해석해 일관된 C 코드를 생성하고, WSL/GCC 환경으로 검증까지 이어가는 자동화 흐름을 만들고 있습니다.</p>
-              <div class="case-text">
-                <p>이 일은 단순 스크립트 작성보다 개발 구조를 바꾸는 작업에 가깝습니다. 어떤 ARXML 정보를 코드 구조로 바꿀지, 어떤 규칙을 자동화할지, 어떤 검증 단계를 필수로 둘지 판단해야 합니다.</p>
-                <p>자동차 임베디드 실무 경험이 개발 생산성과 품질 자동화로 확장되는 지점입니다. 반복 작업을 줄이면서도 결과를 더 검증 가능하게 만드는 방향을 꾸준히 밀고 있습니다.</p>
+            <article class="case-study">
+              <div class="case-index">03</div>
+              <div class="case-content">
+                <p class="case-company">LS Automotive</p>
+                <h3>SCM과 차종별 양산 대응</h3>
+                <p class="case-summary">조향 컬럼 위치 제어와 easy-exit, 메모리 위치 복원 같은 편의 기능이 실제 제어기 구조로 어떻게 연결되는지 다뤘습니다.</p>
+                <div class="case-text">
+                  <p>SCM은 기능 하나를 구현하는 문제보다 차종과 플랫폼에 따라 요구사항을 구조화하고 양산 단계 이슈를 디버깅하는 문제가 더 컸습니다. AUTOSAR Mobile Gene, MATLAB/Simulink, 모델 기반 설계 흐름을 실무에 붙여 본 경험입니다.</p>
+                  <p>제어 대상이 커지면서 시스템 관점이 중요해지는 구간이었습니다. 차종별 대응, 양산 이슈, 실제 사용자 체감 품질이 모두 소프트웨어 구조와 연결되는 경험을 쌓았습니다.</p>
+                </div>
+                <ul class="case-tags">
+                  <li>SCM Platform 1.0 / 2.0 대응</li>
+                  <li>차종별 사양 해석과 구조화</li>
+                  <li>양산 단계 디버깅과 품질 대응</li>
+                </ul>
               </div>
-              <ul class="case-tags">
-                <li>ARXML 파싱과 생성 규칙 정리</li>
-                <li>Python 기반 코드 생성 툴링</li>
-                <li>WSL/GCC 기반 단위 검증 자동화</li>
-              </ul>
-            </div>
-          </article>
+            </article>
+
+            <article class="case-study">
+              <div class="case-index">04</div>
+              <div class="case-content">
+                <p class="case-company">LS Automotive</p>
+                <h3>PSU와 기능안전 문맥</h3>
+                <p class="case-summary">Power Seat Unit에서는 시트 위치 제어 그 자체보다, 안전 요구사항과 진단·fail-safe 구조를 실제 개발 흐름에 넣는 경험이 중요했습니다.</p>
+                <div class="case-text">
+                  <p>ASIL-A 수준 요구사항을 반영하면서 디버깅, 기능 구현, 진단 및 fail-safe 로직, 그리고 SCD와 SDD 같은 산출물 작성을 함께 다뤘습니다. 코드와 문서가 같은 의미를 가져야 하는 프로젝트였습니다.</p>
+                  <p>정상 동작을 만드는 것만으로는 충분하지 않았습니다. 어떤 고장을 진단 대상으로 볼지, 실패 시 어떤 안전 상태로 들어갈지, 그 판단을 문서와 구현 모두에서 설명 가능해야 했습니다.</p>
+                </div>
+                <ul class="case-tags">
+                  <li>안전 요구사항 동시 반영</li>
+                  <li>진단 항목과 fail-safe</li>
+                  <li>문서와 구현의 정합성</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="case-study">
+              <div class="case-index">05</div>
+              <div class="case-content">
+                <p class="case-company">LS Automotive</p>
+                <h3>통합제어기 선행 구조화</h3>
+                <p class="case-summary">시트, 램프, 카메라 모니터링과 여러 액추에이터 상태를 하나의 제어기 문맥 안에서 묶고 명령 흐름으로 연결하는 선행 과제에 참여했습니다.</p>
+                <div class="case-text">
+                  <p>이 프로젝트의 본질은 특정 기능 구현이 아니라 구조 정의였습니다. 여러 입력과 기능을 하나의 제어기 안에서 어떻게 나누고, 어떤 인터페이스와 이벤트 흐름으로 연결할지 검토하는 일이 중심이었습니다.</p>
+                  <p>즉시 눈에 보이는 기능보다 제어기 아키텍처 감각을 키워준 경험이었습니다. 이후 양산 가능성을 고려해 구조를 먼저 정리하는 선행 개발의 무게를 이해하게 된 프로젝트입니다.</p>
+                </div>
+                <ul class="case-tags">
+                  <li>다수 기능 통합 구조 검토</li>
+                  <li>인터페이스와 이벤트 흐름</li>
+                  <li>선행 단계 구조 검증</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="case-study">
+              <div class="case-index">06</div>
+              <div class="case-content">
+                <p class="case-company">MOBASE ASEC</p>
+                <h3>AUTOSAR 코드 생성과 검증 자동화</h3>
+                <p class="case-summary">AUTOSAR ARXML을 해석해 일관된 C 코드를 생성하고, WSL/GCC 환경으로 검증까지 이어가는 자동화 흐름을 만들고 있습니다.</p>
+                <div class="case-text">
+                  <p>이 일은 단순 스크립트 작성보다 개발 구조를 바꾸는 작업에 가깝습니다. 어떤 ARXML 정보를 코드 구조로 바꿀지, 어떤 규칙을 자동화할지, 어떤 검증 단계를 필수로 둘지 판단해야 합니다.</p>
+                  <p>자동차 임베디드 실무 경험이 개발 생산성과 품질 자동화로 확장되는 지점입니다. 반복 작업을 줄이면서도 결과를 더 검증 가능하게 만드는 방향을 꾸준히 밀고 있습니다.</p>
+                </div>
+                <ul class="case-tags">
+                  <li>ARXML 파싱과 생성 규칙 정리</li>
+                  <li>Python 기반 코드 생성 툴링</li>
+                  <li>WSL/GCC 기반 단위 검증 자동화</li>
+                </ul>
+              </div>
+            </article>
+          </section>
         </section>
 
-        <section id="personal" class="section">
-          <div class="section-head">
-            <p class="section-label">Personal project browser</p>
-            <h2>개인 프로젝트 브라우저</h2>
-          </div>
-
-          <div class="personal-browser">
-            <div class="personal-nav" role="tablist" aria-label="개인 프로젝트 목록">
-              <button class="personal-tab is-active" type="button" role="tab" aria-selected="true" data-project="kiwom">
-                <span class="tab-category">Operations workbench</span>
-                <strong>KIWOM</strong>
-                <small>추천, 운영, 자동매매를 한 워크벤치로 묶은 프로젝트</small>
-              </button>
-              <button class="personal-tab" type="button" role="tab" aria-selected="false" data-project="vmcu">
-                <span class="tab-category">Embedded education</span>
-                <strong>Virtual MCU</strong>
-                <small>브라우저 안에서 MCU 학습 환경을 만든 시뮬레이터</small>
-              </button>
-              <button class="personal-tab" type="button" role="tab" aria-selected="false" data-project="discord">
-                <span class="tab-category">Remote operations</span>
-                <strong>Discord Agent</strong>
-                <small>로컬 Codex 세션을 원격으로 제어하는 운영 도구</small>
-              </button>
-              <button class="personal-tab" type="button" role="tab" aria-selected="false" data-project="siteauto">
-                <span class="tab-category">Browser automation</span>
-                <strong>Site Auto</strong>
-                <small>DOM snapshot과 repair 흐름을 묶은 사이드패널 도구</small>
-              </button>
-              <button class="personal-tab" type="button" role="tab" aria-selected="false" data-project="security">
-                <span class="tab-category">Testing workbench</span>
-                <strong>Site Security Check</strong>
-                <small>Mouse replay와 isTrusted 차이를 검증하는 워크벤치</small>
-              </button>
+        <section class="mode-panel" data-mode="personal" hidden>
+          <section class="section">
+            <div class="section-head">
+              <p class="section-label">Personal projects</p>
+              <h2>가볍게 훑는 개인 프로젝트</h2>
             </div>
 
-            <div class="personal-stage">
-              <article class="project-panel is-active" data-project="kiwom">
-                <div class="project-panel-copy">
-                  <p class="project-panel-label">Operations workbench</p>
+            <div class="personal-list">
+              <article class="personal-item">
+                <div class="personal-copy">
+                  <p class="personal-label">Operations workbench</p>
                   <h3>KIWOM</h3>
-                  <p class="project-panel-lead">추천 엔진과 자동매매 실행 엔진을 분리하고, readiness 체크와 운영 로그를 통해 실수성 주문을 줄이는 방향으로 설계한 워크벤치입니다.</p>
-                  <div class="project-panel-text">
-                    <p>이 프로젝트는 단순 자동매매 앱보다 운영 도구에 가깝습니다. 스캔, 추천, 종목 상세, 포지션 운영을 한 흐름으로 묶고, 실제 사용 중 무엇을 먼저 봐야 하는지 우선순위를 화면 구조로 정리했습니다.</p>
-                    <p>핵심은 `잘 돌아간다`보다 `운영자가 판단 가능한 상태로 보인다`는 점이었습니다. 그래서 추천 결과뿐 아니라 readiness, 리스크, 포지션 상태를 같은 화면 안에서 보게 했습니다.</p>
-                  </div>
-                  <ul class="project-panel-tags">
-                    <li>FastAPI + React 운영 구조</li>
-                    <li>추천 / 실행 엔진 분리</li>
+                  <p>추천 엔진과 자동매매 실행 엔진을 분리하고, readiness 체크와 운영 로그를 통해 실수성 주문을 줄이는 방향으로 설계한 워크벤치입니다.</p>
+                  <ul class="personal-tags">
                     <li>운영 로그와 readiness 체크</li>
+                    <li>추천 / 실행 엔진 분리</li>
                   </ul>
                 </div>
-                <div class="project-panel-media">
+                <div class="personal-media">
                   <img src="./assets/kiwom_scan_overview.png" alt="KIWOM 전체 스캔 화면" />
                 </div>
               </article>
 
-              <article class="project-panel" data-project="vmcu" hidden>
-                <div class="project-panel-copy">
-                  <p class="project-panel-label">Embedded education</p>
+              <article class="personal-item">
+                <div class="personal-copy">
+                  <p class="personal-label">Embedded education</p>
                   <h3>Virtual MCU</h3>
-                  <p class="project-panel-lead">브라우저 안에서 MCU 학습 환경을 구현해, 보드 상태와 레지스터 변화를 한 흐름 안에서 보이게 만든 교육형 시뮬레이터입니다.</p>
-                  <div class="project-panel-text">
-                    <p>기존 학습 자료가 문서와 코드 조각 중심이라면, 이 프로젝트는 학생이 입력과 출력, 레지스터 변화, 회로 흐름을 동시에 볼 수 있게 하는 데 초점을 뒀습니다.</p>
-                    <p>보드, UART 입력, 핀 상태, 내부 로직을 하나의 학습면에 정리해서 단순 설명보다 실제 동작 구조를 이해하는 쪽에 더 가깝게 만들었습니다.</p>
-                  </div>
-                  <ul class="project-panel-tags">
+                  <p>브라우저 안에서 MCU 학습 환경을 구현해, 보드 상태와 레지스터 변화를 한 흐름 안에서 보이게 만든 교육형 시뮬레이터입니다.</p>
+                  <ul class="personal-tags">
                     <li>Web Worker 기반 시뮬레이션</li>
                     <li>레지스터와 보드 상태 동시 관찰</li>
-                    <li>교육용 흐름 중심 인터페이스</li>
                   </ul>
                 </div>
-                <div class="project-panel-media">
+                <div class="personal-media">
                   <img src="./assets/virtual_mcu_home.png" alt="Virtual MCU 메인 화면" />
                 </div>
               </article>
 
-              <article class="project-panel" data-project="discord" hidden>
-                <div class="project-panel-copy">
-                  <p class="project-panel-label">Remote operations</p>
+              <article class="personal-item">
+                <div class="personal-copy">
+                  <p class="personal-label">Remote operations</p>
                   <h3>Discord Agent</h3>
-                  <p class="project-panel-lead">Discord 채널에서 로컬 Codex 세션을 제어하고 승인 흐름을 운영 도구처럼 다룰 수 있게 만든 원격 협업 컨트롤러입니다.</p>
-                  <div class="project-panel-text">
-                    <p>단순 봇이 아니라, 세션 상태와 승인, 사용량, 로그를 한 화면에서 보고 제어해야 하는 관리 도구 성격으로 접근했습니다.</p>
-                    <p>명령 전달과 상태 확인이 섞여 있는 환경에서, 어떤 정보가 먼저 보여야 하는지와 어떤 동작이 한 번에 실행되어야 하는지를 인터페이스 구조로 정리한 프로젝트입니다.</p>
-                  </div>
-                  <ul class="project-panel-tags">
+                  <p>Discord 채널에서 로컬 Codex 세션을 제어하고 승인 흐름을 운영 도구처럼 다룰 수 있게 만든 원격 협업 컨트롤러입니다.</p>
+                  <ul class="personal-tags">
                     <li>원격 세션 운영 흐름</li>
                     <li>상태 / 승인 / 로그 통합</li>
-                    <li>협업형 컨트롤 패널</li>
                   </ul>
                 </div>
-                <div class="project-panel-media">
+                <div class="personal-media">
                   <img src="./assets/discord_agent_panel_kr.png" alt="Discord Agent 패널 화면" />
                 </div>
               </article>
 
-              <article class="project-panel" data-project="siteauto" hidden>
-                <div class="project-panel-copy">
-                  <p class="project-panel-label">Browser automation</p>
-                  <h3>Site Auto</h3>
-                  <p class="project-panel-lead">Chrome Extension 사이드패널을 중심으로 DOM snapshot, replay, repair, permission recovery를 한곳에서 다루게 만든 자동화 도구입니다.</p>
-                  <div class="project-panel-text">
-                    <p>자동화 프로젝트를 실제로 굴리다 보면 스크립트보다 운영 인터페이스가 더 중요해질 때가 많습니다. 이 프로젝트는 브라우저 안에서 상태를 확인하고 수동 개입과 자동 복구를 연결하는 데 초점을 뒀습니다.</p>
-                    <p>즉 `자동화 코드`보다는 `자동화를 운영하는 패널`에 가깝게 설계했습니다.</p>
-                  </div>
-                  <ul class="project-panel-tags">
-                    <li>Chrome Extension 사이드패널</li>
-                    <li>Snapshot / Replay / Repair</li>
-                    <li>운영형 자동화 UI</li>
+              <article class="personal-item">
+                <div class="personal-copy">
+                  <p class="personal-label">Market tracking app</p>
+                  <h3>중고 매물 레이더</h3>
+                  <p>띠코 같은 특정 키워드를 중고나라·번개장터에서 추적하고, 시세 범위와 병합 결과를 함께 보도록 정리한 중고 매물 추적 앱입니다.</p>
+                  <ul class="personal-tags">
+                    <li>중고나라 / 번개장터 동시 추적</li>
+                    <li>시세 비교와 기회 후보 정리</li>
                   </ul>
                 </div>
-                <div class="project-panel-media">
-                  <img src="./assets/site_auto_panel.png" alt="Site Auto 패널 화면" />
-                </div>
-              </article>
-
-              <article class="project-panel" data-project="security" hidden>
-                <div class="project-panel-copy">
-                  <p class="project-panel-label">Testing workbench</p>
-                  <h3>Site Security Check</h3>
-                  <p class="project-panel-lead">Mouse replay와 isTrusted 검증을 묶어 브라우저 자동화가 실제 사용자 입력과 어디서 다르게 취급되는지 추적하는 워크벤치입니다.</p>
-                  <div class="project-panel-text">
-                    <p>자동화가 막히는 이유를 재현하려면 단순 성공/실패보다 이벤트 흐름과 브라우저 보안 문맥을 같이 봐야 했습니다. 그래서 실험용 스크립트가 아니라 비교 가능한 작업대처럼 구성했습니다.</p>
-                    <p>결과적으로 이 프로젝트는 자동화 도구를 만드는 일과 자동화를 검증하는 일을 하나의 브라우저 실험 환경으로 묶은 사례입니다.</p>
-                  </div>
-                  <ul class="project-panel-tags">
-                    <li>Mouse replay와 실사용 입력 비교</li>
-                    <li>isTrusted 검증 흐름</li>
-                    <li>Playwright 기반 워크벤치</li>
-                  </ul>
-                </div>
-                <div class="project-panel-media">
-                  <img src="./assets/mouse_replay_home.png" alt="Mouse Replay Workbench 화면" />
+                <div class="personal-media">
+                  <img src="./assets/used_market_radar_overview.png" alt="중고 매물 레이더 대표 화면" />
                 </div>
               </article>
             </div>
-          </div>
+          </section>
         </section>
 
         <section id="archive" class="section archive">
@@ -370,31 +309,31 @@
 
     <script>
       (() => {
-        const tabs = Array.from(document.querySelectorAll(".personal-tab"));
-        const panels = Array.from(document.querySelectorAll(".project-panel"));
+        const tabs = Array.from(document.querySelectorAll(".mode-tab"));
+        const panels = Array.from(document.querySelectorAll(".mode-panel"));
 
-        function activate(projectId) {
+        function activate(mode) {
           tabs.forEach((tab) => {
-            const active = tab.dataset.project === projectId;
+            const active = tab.dataset.mode === mode;
             tab.classList.toggle("is-active", active);
             tab.setAttribute("aria-selected", active ? "true" : "false");
           });
 
           panels.forEach((panel) => {
-            const active = panel.dataset.project === projectId;
+            const active = panel.dataset.mode === mode;
             panel.classList.toggle("is-active", active);
             panel.hidden = !active;
           });
 
-          history.replaceState(null, "", `#${projectId}`);
+          history.replaceState(null, "", `#${mode}`);
         }
 
         tabs.forEach((tab) => {
-          tab.addEventListener("click", () => activate(tab.dataset.project));
+          tab.addEventListener("click", () => activate(tab.dataset.mode));
         });
 
         const initial = window.location.hash.replace("#", "");
-        if (tabs.some((tab) => tab.dataset.project === initial)) {
+        if (tabs.some((tab) => tab.dataset.mode === initial)) {
           activate(initial);
         }
       })();
