@@ -351,6 +351,12 @@ img {
   padding-top: 12px;
 }
 
+.project-card.values {
+  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.48fr);
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.48);
+}
+
 .project-copy {
   display: grid;
   gap: 16px;
@@ -384,6 +390,24 @@ img {
   width: 7px;
   height: 1px;
   background: var(--accent);
+}
+
+.value-list {
+  display: grid;
+  align-content: stretch;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.value-list span {
+  display: grid;
+  align-items: center;
+  min-height: 74px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--text);
+  font-weight: 600;
 }
 
 .proof-list {
@@ -492,6 +516,7 @@ img {
   .intro-grid,
   .career-item,
   .project-card,
+  .project-card.values,
   .review-grid {
     grid-template-columns: 1fr;
   }
@@ -518,7 +543,7 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(2.55rem, 14vw, 4.15rem);
+    font-size: clamp(2.36rem, 12vw, 3.85rem);
   }
 
   .hero-copy {
@@ -549,6 +574,15 @@ img {
   .project-card {
     gap: 20px;
     padding: 28px 0;
+  }
+
+  .project-card.values {
+    grid-template-columns: 1fr;
+    background: transparent;
+  }
+
+  .project-card.values h3 {
+    font-size: clamp(1.7rem, 8.8vw, 2.55rem);
   }
 
   .project-visual {
