@@ -81,9 +81,9 @@ img {
   position: relative;
   z-index: 5;
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
-  width: min(1600px, calc(100% - 48px));
-  min-height: 78px;
+  grid-template-columns: 190px minmax(0, 1fr);
+  width: min(1440px, calc(100% - 48px));
+  min-height: 66px;
   margin: 0 auto;
   background: rgba(243, 241, 235, 0.88);
   border-right: 1px solid var(--line);
@@ -94,18 +94,18 @@ img {
 
 .brand {
   display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
-  gap: 12px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
   align-items: center;
-  padding: 14px 18px;
+  padding: 12px 16px;
   border-right: 1px solid var(--line);
 }
 
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   color: #fff;
   background: var(--ink);
   font-family: var(--mono);
@@ -138,8 +138,8 @@ img {
   display: grid;
   align-content: center;
   gap: 8px;
-  min-height: 78px;
-  padding: 12px 20px;
+  min-height: 66px;
+  padding: 10px 18px;
   color: var(--muted);
   text-align: left;
   background: transparent;
@@ -176,24 +176,24 @@ img {
 }
 
 .site-main {
-  width: min(1600px, calc(100% - 48px));
+  width: min(1440px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 42px 0 84px;
+  padding: 26px 0 76px;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.48fr);
-  gap: 48px;
-  align-items: end;
-  min-height: 300px;
-  padding: 18px 0 42px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(340px, 0.42fr);
+  gap: 42px;
+  align-items: center;
+  min-height: auto;
+  padding: 14px 0 30px;
   border-bottom: 1px solid var(--line-strong);
 }
 
 .hero-copy {
   display: grid;
-  gap: 24px;
+  gap: 16px;
 }
 
 .hero h1,
@@ -210,10 +210,10 @@ img {
 }
 
 .hero h1 {
-  max-width: 16ch;
-  font-size: clamp(2.25rem, 4vw, 4.35rem);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  max-width: 20ch;
+  font-size: clamp(2.2rem, 3.25vw, 3.45rem);
+  line-height: 1.12;
+  letter-spacing: -0.032em;
 }
 
 .hero p,
@@ -228,15 +228,16 @@ img {
 }
 
 .hero-copy > p:last-child {
-  max-width: 56rem;
-  font-size: 1rem;
+  max-width: 52rem;
+  font-size: 0.98rem;
 }
 
 .hero-panel {
   display: grid;
   gap: 14px;
-  padding: 28px 0 0;
-  border-top: 1px solid var(--line-strong);
+  padding: 22px 24px;
+  background: rgba(251, 250, 246, 0.58);
+  border: 1px solid var(--line-strong);
 }
 
 .hero-panel p {
@@ -245,12 +246,12 @@ img {
 }
 
 .hero-panel strong {
-  font-size: clamp(1.65rem, 2.3vw, 2.55rem);
-  line-height: 1.2;
+  font-size: clamp(1.32rem, 1.9vw, 2rem);
+  line-height: 1.26;
 }
 
 .panel {
-  padding-top: 42px;
+  padding-top: 30px;
 }
 
 .panel[hidden],
@@ -260,10 +261,10 @@ img {
 
 .panel-head {
   display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 22px;
   align-items: start;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .panel-number {
@@ -273,11 +274,11 @@ img {
 }
 
 .panel-head h2 {
-  max-width: 24ch;
+  max-width: 28ch;
   margin-top: 10px;
-  font-size: clamp(1.9rem, 3vw, 3.35rem);
-  line-height: 1.16;
-  letter-spacing: -0.032em;
+  font-size: clamp(1.65rem, 2.45vw, 2.65rem);
+  line-height: 1.18;
+  letter-spacing: -0.028em;
 }
 
 .intro-layout {
@@ -361,16 +362,16 @@ img {
 }
 
 .project-head {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .project-head h2 {
-  max-width: 30ch;
+  max-width: 34ch;
 }
 
 .project-lab {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: 250px minmax(0, 1fr);
   gap: 32px;
   align-items: start;
 }
@@ -392,8 +393,8 @@ img {
   grid-template-columns: 38px minmax(0, 1fr);
   gap: 10px;
   align-items: center;
-  min-height: 64px;
-  padding: 14px 14px;
+  min-height: 58px;
+  padding: 12px 12px;
   text-align: left;
   background: transparent;
   border: 1px solid transparent;
@@ -421,10 +422,10 @@ img {
 .project-detail {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(460px, 0.78fr);
-  gap: 36px;
+  gap: 30px;
   align-items: center;
-  min-height: 500px;
-  padding: 34px;
+  min-height: 430px;
+  padding: 30px;
   background:
     linear-gradient(135deg, rgba(251, 250, 246, 0.92), rgba(247, 244, 237, 0.78)),
     var(--paper);
@@ -446,12 +447,12 @@ img {
 
 .project-copy {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .project-detail h3 {
-  font-size: clamp(1.75rem, 2.35vw, 2.75rem);
-  line-height: 1.18;
+  font-size: clamp(1.58rem, 2.05vw, 2.35rem);
+  line-height: 1.2;
   letter-spacing: -0.024em;
 }
 
