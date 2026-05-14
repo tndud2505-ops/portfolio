@@ -447,11 +447,23 @@ img {
   border: 1px solid var(--line);
 }
 
+.project-visual figcaption {
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  border-top: 1px solid var(--line);
+}
+
 .project-visual img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: left top;
   filter: saturate(0.94) contrast(0.98);
+}
+
+.project-card.featured .project-visual img {
+  object-position: left 34%;
 }
 
 .project-visual.compact img {
