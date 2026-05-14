@@ -147,10 +147,20 @@
               <h2>작업 아카이브</h2>
               <p class="section-note">회사명보다 시스템과 문제의 유형을 먼저 두고 묶었습니다.</p>
             </div>
-            <p class="archive-mode-note">
-              현재 보기:
-              <span class="archive-mode-value" data-mode-label>실무 기록</span>
-            </p>
+            <div class="archive-tools">
+              <p class="archive-mode-note">
+                현재 보기:
+                <span class="archive-mode-value" data-mode-label>실무 기록</span>
+              </p>
+              <div class="archive-switch" role="tablist" aria-label="작업 아카이브 보기">
+                <button class="mode-tab is-active" type="button" role="tab" aria-selected="true" data-mode="work">
+                  실무 기록
+                </button>
+                <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="personal">
+                  개인 작업
+                </button>
+              </div>
+            </div>
           </div>
 
           <div class="archive-panel is-active" data-mode="work">
