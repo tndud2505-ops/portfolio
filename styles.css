@@ -78,8 +78,7 @@ img {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 5;
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr);
@@ -417,7 +416,7 @@ img {
 
 .project-detail {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.58fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(460px, 0.78fr);
   gap: 36px;
   align-items: center;
   min-height: 500px;
@@ -443,13 +442,22 @@ img {
 
 .project-copy {
   display: grid;
-  gap: 18px;
+  gap: 16px;
 }
 
 .project-detail h3 {
-  font-size: clamp(1.9rem, 2.8vw, 3.2rem);
-  line-height: 1.16;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.75rem, 2.35vw, 2.75rem);
+  line-height: 1.18;
+  letter-spacing: -0.024em;
+}
+
+.project-detail--wide {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+
+.project-detail--wide .project-copy {
+  max-width: 74rem;
 }
 
 .proof-list {
@@ -458,6 +466,33 @@ img {
   margin: 6px 0 0;
   background: var(--line);
   border: 1px solid var(--line);
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 14px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 16px;
+  color: #384039;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.76em;
+  width: 7px;
+  height: 1px;
+  background: var(--accent);
 }
 
 .proof-list div {
@@ -492,20 +527,24 @@ img {
 }
 
 .project-visual img {
-  aspect-ratio: 16 / 10;
-  object-fit: contain;
-  object-position: left top;
+  height: 360px;
+  object-fit: cover;
+  object-position: top center;
   filter: saturate(0.96) contrast(0.98);
 }
 
-.project-detail[data-project="ops"] .project-visual img {
-  aspect-ratio: auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 430px;
-  margin: 0 auto;
+.project-visual--wide img {
+  width: 100%;
+  height: auto;
+  max-height: 720px;
   object-fit: contain;
-  object-position: center;
+  object-position: top center;
+}
+
+.project-detail[data-project="ops"] .project-visual img {
+  height: 430px;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .project-visual.tall {
@@ -690,6 +729,21 @@ img {
   .proof-list div {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-visual img,
+  .project-detail[data-project="ops"] .project-visual img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-visual--wide img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
   }
 
   .process-map {
