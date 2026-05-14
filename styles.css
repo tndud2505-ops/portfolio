@@ -210,9 +210,9 @@ img {
 }
 
 .hero h1 {
-  max-width: 20ch;
-  font-size: clamp(2.2rem, 3.25vw, 3.45rem);
-  line-height: 1.12;
+  max-width: 22ch;
+  font-size: clamp(2rem, 2.85vw, 3.05rem);
+  line-height: 1.14;
   letter-spacing: -0.032em;
 }
 
@@ -274,10 +274,10 @@ img {
 }
 
 .panel-head h2 {
-  max-width: 28ch;
+  max-width: 34ch;
   margin-top: 10px;
-  font-size: clamp(1.65rem, 2.45vw, 2.65rem);
-  line-height: 1.18;
+  font-size: clamp(1.45rem, 1.95vw, 2.2rem);
+  line-height: 1.24;
   letter-spacing: -0.028em;
 }
 
@@ -421,7 +421,7 @@ img {
 
 .project-detail {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(460px, 0.78fr);
+  grid-template-columns: minmax(320px, 0.72fr) minmax(520px, 1fr);
   gap: 30px;
   align-items: center;
   min-height: 430px;
@@ -451,8 +451,9 @@ img {
 }
 
 .project-detail h3 {
-  font-size: clamp(1.58rem, 2.05vw, 2.35rem);
-  line-height: 1.2;
+  max-width: 36ch;
+  font-size: clamp(1.35rem, 1.55vw, 1.82rem);
+  line-height: 1.28;
   letter-spacing: -0.024em;
 }
 
@@ -473,10 +474,11 @@ img {
 
 .proof-list {
   display: grid;
-  gap: 1px;
-  margin: 6px 0 0;
-  background: var(--line);
-  border: 1px solid var(--line);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 0;
+  background: transparent;
+  border: 0;
 }
 
 .feature-list {
@@ -507,11 +509,37 @@ img {
 }
 
 .proof-list div {
-  display: grid;
-  grid-template-columns: 122px minmax(0, 1fr);
-  gap: 18px;
-  padding: 16px 18px;
-  background: rgba(255, 255, 255, 0.66);
+  position: relative;
+  display: block;
+  min-height: 168px;
+  padding: 42px 18px 20px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(250, 248, 242, 0.72));
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px rgba(63, 58, 44, 0.06);
+}
+
+.proof-list div::before {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  color: rgba(18, 71, 59, 0.34);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+
+.proof-list div:nth-child(1)::before {
+  content: "01";
+}
+
+.proof-list div:nth-child(2)::before {
+  content: "02";
+}
+
+.proof-list div:nth-child(3)::before {
+  content: "03";
 }
 
 .proof-list dt {
@@ -524,9 +552,9 @@ img {
 }
 
 .proof-list dd {
-  margin: 0;
+  margin: 11px 0 0;
   color: #3f453f;
-  line-height: 1.7;
+  line-height: 1.68;
 }
 
 .project-visual {
@@ -538,7 +566,9 @@ img {
 }
 
 .project-visual img {
-  height: 360px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
   object-fit: cover;
   object-position: top center;
   filter: saturate(0.96) contrast(0.98);
@@ -546,16 +576,25 @@ img {
 
 .project-visual--wide img {
   width: 100%;
-  height: auto;
-  max-height: 720px;
-  object-fit: contain;
+  max-height: none;
+  object-fit: cover;
   object-position: top center;
 }
 
 .project-detail[data-project="ops"] .project-visual img {
-  height: 430px;
+  aspect-ratio: 4 / 5;
+  height: auto;
   object-fit: cover;
   object-position: top center;
+}
+
+.project-detail[data-project="stock"] .project-visual img {
+  object-position: center 42%;
+}
+
+.project-detail[data-project="mcu"] .project-visual img {
+  aspect-ratio: 16 / 10.5;
+  object-position: center 52%;
 }
 
 .project-visual.tall {
@@ -621,7 +660,9 @@ img {
   margin: 2px 0 0;
   overflow: hidden;
   color: #f8f5ed;
-  background: #20231f;
+  background:
+    radial-gradient(circle at 22% 12%, rgba(125, 186, 151, 0.16), transparent 32%),
+    #161914;
   border: 1px solid rgba(31, 33, 29, 0.42);
   box-shadow: 0 18px 42px rgba(63, 58, 44, 0.14);
 }
@@ -658,7 +699,7 @@ img {
 
 .agent-grid {
   display: grid;
-  grid-template-columns: 1.14fr 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin-top: 14px;
 }
@@ -666,7 +707,7 @@ img {
 .agent-pane {
   display: grid;
   align-content: start;
-  min-height: 116px;
+  min-height: 150px;
   padding: 14px;
   background:
     linear-gradient(135deg, rgba(248, 245, 237, 0.1), rgba(248, 245, 237, 0.045)),
@@ -675,7 +716,7 @@ img {
 }
 
 .agent-pane--lead {
-  grid-row: span 2;
+  grid-row: auto;
 }
 
 .agent-pane strong {
@@ -689,6 +730,28 @@ img {
 .agent-pane span {
   color: rgba(248, 245, 237, 0.7);
   line-height: 1.62;
+}
+
+.agent-pane code {
+  display: block;
+  margin-top: 6px;
+  color: rgba(248, 245, 237, 0.78);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.agent-status {
+  justify-self: start;
+  margin: 2px 0 4px;
+  padding: 3px 7px;
+  color: #1b241d !important;
+  background: #b7d7a8;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  line-height: 1.2 !important;
+  text-transform: uppercase;
 }
 
 .agent-flow {
@@ -756,6 +819,7 @@ img {
   .career-item,
   .project-lab,
   .project-detail,
+  .proof-list,
   .review-grid,
   .agent-grid {
     grid-template-columns: 1fr;
@@ -836,13 +900,13 @@ img {
   }
 
   .project-detail h3 {
-    font-size: clamp(1.65rem, 8vw, 2.38rem);
-    line-height: 1.18;
+    font-size: clamp(1.42rem, 6.8vw, 2rem);
+    line-height: 1.22;
   }
 
   .proof-list div {
-    grid-template-columns: 1fr;
-    gap: 6px;
+    min-height: 0;
+    padding: 40px 16px 18px;
   }
 
   .feature-list {

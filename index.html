@@ -59,18 +59,18 @@
       <section id="top" class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Project-based engineering portfolio</p>
-          <h1>문제를 구조화하고, 실제 동작하는 도구로 검증한 포트폴리오.</h1>
+          <h1>자동화 도구와 학습 시뮬레이터를 직접 구현합니다.</h1>
           <p>
-            자동차 제어·검증 실무 경험을 바탕으로, 반복 확인이 필요한 문제를 직접 도구로 만들었습니다.
-            각 프로젝트는 문제 정의, 설계 방식, 구현 화면, 확인 가능한 결과를 중심으로 정리했습니다.
+            차량 제어·검증 실무에서 다룬 상태 추적, 코드 생성, 자동화 경험을 개인 프로젝트로 확장했습니다.
+            Discord 원격 작업 자동화, Codex 멀티 에이전트 환경, 주식 분석·자동매매, 웹 기반 MCU 교육 도구를 실제 동작 흐름 중심으로 정리했습니다.
           </p>
         </div>
 
         <aside class="hero-panel" aria-label="포트폴리오 핵심">
           <p>중점적으로 보여드리는 역량</p>
-          <strong>문제 정의, 흐름 설계, 구현 및 검증</strong>
+          <strong>입력, 처리, 검토, 결과가 남는 화면</strong>
           <span>
-            원격 작업 모니터링, 멀티 에이전트 작업 하네스, 중고거래 매물 추적, 주식 조건 분석·실행 관리, 웹 기반 MCU 학습 환경
+            Discord 이슈 자동화, 멀티 에이전트 작업 환경, 중고거래 매물 추적, 주식 조건 분석·자동매매, 웹 기반 MCU 가상화
           </span>
         </aside>
       </section>
@@ -170,7 +170,7 @@
           <p class="panel-number">03</p>
           <div>
             <p class="eyebrow">개인 프로젝트</p>
-            <h2>반복 확인, 상태 추적, 판단 보조가 필요한 문제를 운영 가능한 화면으로 구현했습니다.</h2>
+            <h2>이슈 등록, 에이전트 작업, 조건 분석, 가상 MCU 실행까지 실제 흐름이 보이는 도구를 만들었습니다.</h2>
           </div>
         </div>
 
@@ -179,7 +179,7 @@
             <p class="index-label">project index</p>
             <button class="project-button is-active" type="button" data-project="ops">
               <span>01</span>
-              장시간 작업 원격 모니터링 콘솔
+              Discord 원격 작업 자동화
             </button>
             <button class="project-button" type="button" data-project="board">
               <span>02</span>
@@ -202,37 +202,37 @@
           <div class="project-stage">
             <article class="project-detail is-active" data-project="ops">
               <div class="project-copy">
-                <p class="project-kicker">Remote Job Monitoring Console</p>
-                <h3>장시간 실행 작업을 원격으로 모니터링하고 제어하는 운영 콘솔</h3>
+                <p class="project-kicker">Discord Remote Automation</p>
+                <h3>Discord에 이슈를 남기면 AI가 검토하고 작업 결과를 되돌려주는 원격 자동화</h3>
                 <p>
-                  장시간 실행되는 자동화 작업의 상태, 진행률, 예상 완료 시간, 로그, 중지/재시작 명령을
-                  한 화면에서 확인하도록 만든 운영 패널입니다. 작업이 멈췄는지 직접 터미널을 보지 않아도
-                  판단할 수 있고, 문제가 생기면 원격으로 바로 조치할 수 있게 구성했습니다.
+                  로컬 PC 앞에 있지 않아도 Discord에 요청을 남기면 AI가 내용을 검토하고,
+                  필요한 작업을 수행한 뒤 진행 상황과 결과를 다시 메시지로 업데이트하는 구조입니다.
+                  단순 알림봇이 아니라 이슈 등록, 주기적 검토, 작업 실행, 상태 보고가 이어지는 원격 작업 흐름으로 만들었습니다.
                 </p>
                 <ul class="feature-list">
-                  <li>실행 상태와 진행률 추적</li>
-                  <li>잔여 시간과 실행 한도 표시</li>
-                  <li>중지/재시작 원격 제어</li>
-                  <li>로그와 작업 폴더 접근</li>
+                  <li>Discord 이슈 기반 작업 요청</li>
+                  <li>AI 정기 검토와 답변 생성</li>
+                  <li>작업 실행 후 진행 상태 업데이트</li>
+                  <li>로그 확인과 원격 중지/재시작</li>
                 </ul>
                 <dl class="proof-list">
                   <div>
                     <dt>해결한 문제</dt>
-                    <dd>장시간 작업은 터미널을 계속 보지 않으면 멈춤, 오류, 완료 여부를 늦게 알게 됩니다.</dd>
+                    <dd>외부에 있을 때는 로컬 터미널을 계속 볼 수 없어 작업이 멈췄는지, 답변이 필요한지, 완료됐는지 늦게 알게 됩니다.</dd>
                   </div>
                   <div>
                     <dt>구현한 방식</dt>
-                    <dd>진행률, 남은 시간, 로그 보기, 폴더 열기, 원격 중지/재시작 버튼을 하나의 패널로 묶었습니다.</dd>
+                    <dd>Discord 이슈 입력, 주기적 AI 검토, 작업 실행, 진행 로그, 완료/보류 상태 업데이트가 하나의 흐름으로 연결되도록 구성했습니다.</dd>
                   </div>
                   <div>
                     <dt>확인 가능한 결과</dt>
-                    <dd>작업 확인 시간을 줄이고, 문제 발생 시 현장에 없어도 즉시 상태 확인과 중지/재시작이 가능합니다.</dd>
+                    <dd>사용자는 Discord에서 요청을 남기고, AI의 검토 결과와 작업 진행 상황을 메시지로 확인할 수 있습니다.</dd>
                   </div>
                 </dl>
               </div>
               <figure class="project-visual tall">
                 <img src="./assets/project_ops_preview.png" alt="원격 작업 모니터링 콘솔 화면" />
-                <figcaption>진행률, 제한 시간, 로그, 폴더 열기, 중지/재시작을 한 화면에서 처리하는 원격 작업 패널</figcaption>
+                <figcaption>Discord 요청, AI 검토, 작업 상태, 로그 확인과 원격 제어가 이어지는 자동화 패널</figcaption>
               </figure>
             </article>
 
@@ -241,15 +241,15 @@
                 <p class="project-kicker">Multi-Agent Harness Engineering</p>
                 <h3>여러 Codex 에이전트를 나누어 실행하고 조율하는 멀티 에이전트 하네스</h3>
                 <p>
-                  큰 작업을 하나의 에이전트에게 맡기는 대신, 여러 AI 작업 세션을 역할별로 나누어 동시에 운용하는
-                  Codex 작업 하네스입니다. 여러 작업 창을 나란히 두는 방식으로 각 에이전트가 조사, 구현, 검증, 리뷰 역할을
-                  맡아 진행 상황을 공유하도록 구조를 설계했습니다.
+                  큰 작업을 하나의 AI 세션에 모두 맡기는 대신, 여러 Codex 에이전트가 각자 작업 환경을 갖고
+                  조사, 구현, 검증, 리뷰를 병렬로 진행하도록 만든 작업 하네스입니다. 에이전트별 결과를
+                  메인 세션에서 공유·조율하고, 충돌이나 누락을 리뷰 루프로 다시 잡는 구조를 설계했습니다.
                 </p>
                 <ul class="feature-list">
-                  <li>역할별 에이전트 분리 실행</li>
-                  <li>tmux형 멀티 패널 작업 구조</li>
+                  <li>역할별 Codex 세션 분리</li>
+                  <li>tmux형 멀티 패널 작업 환경</li>
                   <li>에이전트 간 결과 공유와 조율</li>
-                  <li>구현 후 리뷰 루프와 재검토 흐름</li>
+                  <li>리뷰 루프 기반 통합 검증</li>
                 </ul>
               </div>
               <figure class="agent-harness" aria-label="Codex 멀티 에이전트 하네스 구조">
@@ -260,40 +260,47 @@
                   </header>
                   <div class="agent-grid">
                     <section class="agent-pane agent-pane--lead">
-                      <p>Lead Session</p>
-                      <strong>요청 분석 / 작업 분해</strong>
-                      <span>목표, 제약, 완료 기준을 정리하고 각 에이전트의 역할을 배정합니다.</span>
+                      <p>Agent 01 · Planner</p>
+                      <strong>$ codex split-request</strong>
+                      <span class="agent-status">ready</span>
+                      <code>scope: personal projects</code>
+                      <code>send: copy + visual tasks</code>
+                      <code>handoff: agent-02, agent-03</code>
                     </section>
                     <section class="agent-pane">
-                      <p>Agent 01</p>
-                      <strong>구현</strong>
-                      <span>파일 수정, UI 반영, 기능 연결을 담당합니다.</span>
+                      <p>Agent 02 · Implementer</p>
+                      <strong>$ codex edit ui</strong>
+                      <span class="agent-status">working</span>
+                      <code>patch: index.html</code>
+                      <code>patch: styles.css</code>
+                      <code>reply: changed files</code>
                     </section>
                     <section class="agent-pane">
-                      <p>Agent 02</p>
-                      <strong>검증</strong>
-                      <span>테스트, 스크린샷, 회귀 확인을 분리해 수행합니다.</span>
+                      <p>Agent 03 · Verifier</p>
+                      <strong>$ codex screenshot</strong>
+                      <span class="agent-status">checking</span>
+                      <code>open: #project-stock</code>
+                      <code>open: #project-mcu</code>
+                      <code>report: layout issues</code>
                     </section>
                     <section class="agent-pane">
-                      <p>Agent 03</p>
-                      <strong>리뷰</strong>
-                      <span>표현 품질, 누락, 위험 요소를 독립적으로 점검합니다.</span>
-                    </section>
-                    <section class="agent-pane">
-                      <p>Merge</p>
-                      <strong>통합 / 배포</strong>
-                      <span>각 결과를 메인 세션에서 합치고 공개 페이지 반영을 확인합니다.</span>
+                      <p>Agent 04 · Reviewer</p>
+                      <strong>$ codex review-copy</strong>
+                      <span class="agent-status">reviewing</span>
+                      <code>tone: non-resume</code>
+                      <code>check: visitor clarity</code>
+                      <code>return: fixes</code>
                     </section>
                   </div>
                   <div class="agent-flow">
                     <span>Request</span>
-                    <span>Plan</span>
-                    <span>Dispatch</span>
+                    <span>Split</span>
+                    <span>Agents Talk</span>
                     <span>Review</span>
                     <span>Merge</span>
                   </div>
                 </div>
-                <figcaption>하나의 터미널 작업판에서 역할별 Codex 세션을 나누고, 요청부터 리뷰까지 병렬로 관리하는 구조</figcaption>
+                <figcaption>하나의 작업판에서 여러 Codex 세션이 역할을 나누고, 결과를 공유한 뒤 메인 세션에서 통합하는 구조</figcaption>
               </figure>
               <dl class="proof-list">
                 <div>
@@ -302,11 +309,11 @@
                 </div>
                 <div>
                   <dt>구현한 방식</dt>
-                  <dd>요구사항 분석, 코드 수정, 검증, 리뷰 역할을 분리하고 여러 에이전트가 각자의 결과를 공유·조율하는 하네스 구조로 설계했습니다.</dd>
+                    <dd>역할별 Codex 에이전트가 각자 작업 환경을 갖고 실행하며, 중간 결과를 공유하고 메인 세션에서 조율·통합하는 하네스 구조로 설계했습니다.</dd>
                 </div>
                 <div>
                   <dt>확인 가능한 결과</dt>
-                  <dd>여러 관점의 작업 결과를 병렬로 확보하고, 리뷰 루프를 통해 충돌·누락·품질 문제를 더 빨리 발견할 수 있습니다.</dd>
+                    <dd>분석, 구현, 검증, 리뷰를 병렬로 확보하고 에이전트 간 피드백을 남겨 충돌·누락·품질 문제를 더 빨리 발견할 수 있습니다.</dd>
                 </div>
               </dl>
             </article>
@@ -350,72 +357,72 @@
             <article class="project-detail project-detail--media-below" data-project="stock" hidden>
               <div class="project-copy">
                 <p class="project-kicker">Stock Analysis & Auto-Trading Workbench</p>
-                <h3>주식 조건 분석과 자동매매 실행 흐름을 분리한 워크벤치</h3>
+                <h3>차트 조건 분석과 자동매매 실행 단계를 분리한 주식 워크벤치</h3>
                 <p>
-                  종목 후보, 조건 충족 여부, 자동매매 실행 전 체크 항목, 실행 상태와 기록을 분리해 보여주는
-                  주식 자동매매 워크벤치입니다. 자동매매를 무작정 실행하는 화면이 아니라, 조건 검토와 실행 경계를
-                  분리해 사람이 판단 흐름을 확인한 뒤 자동매매 상태를 관리할 수 있도록 구성했습니다.
+                  종목 후보, 열 기반 조건, 차트 이론, 포지션 상태, 자동매매 실행 전 체크 항목을 분리해 보여주는
+                  주식 자동매매 워크벤치입니다. 자동매매를 바로 실행하는 화면이 아니라, 조건 검출과 실행 경계를
+                  분리해 사람이 매매 근거를 확인한 뒤 자동매매 상태를 관리할 수 있도록 구성했습니다.
                 </p>
                 <ul class="feature-list">
-                  <li>종목 후보와 조건 충족 여부 분리</li>
-                  <li>자동매매 실행 전 체크 단계</li>
-                  <li>매매 실행 상태와 결과 기록</li>
-                  <li>조건 검토와 자동 실행 경계 관리</li>
+                  <li>열 기반 조건과 차트 패턴 검토</li>
+                  <li>후보 종목·포지션·주문 이력 분리</li>
+                  <li>자동매매 실행 전 안전 체크</li>
+                  <li>실거래/모의 실행 상태 기록</li>
                 </ul>
                 <dl class="proof-list">
                   <div>
                     <dt>해결한 문제</dt>
-                    <dd>조건 분석, 매매 후보, 자동매매 실행 상태가 섞이면 어떤 근거로 실행됐는지 추적하기 어렵습니다.</dd>
+                    <dd>조건 분석, 차트 해석, 매매 후보, 자동매매 실행 상태가 섞이면 어떤 근거로 실행됐는지 추적하기 어렵습니다.</dd>
                   </div>
                   <div>
                     <dt>구현한 방식</dt>
-                    <dd>후보 목록, 조건 체크, 자동매매 실행 전 확인, 실행 상태, 기록 영역을 분리해 판단과 실행 흐름을 보이게 했습니다.</dd>
+                    <dd>열 기반 조건과 차트 이론을 후보 필터에 반영하고, 포지션·주문 이력·자동매매 상태를 분리해 판단과 실행 흐름을 보이게 했습니다.</dd>
                   </div>
                   <div>
                     <dt>확인 가능한 결과</dt>
-                    <dd>자동매매 실행 여부와 조건 근거를 함께 확인할 수 있어, 실행 전 검토와 실행 후 기록 추적이 쉬워집니다.</dd>
+                    <dd>조건 충족 근거, 보유 포지션, 실행 상태를 함께 확인할 수 있어 자동매매 전 검토와 실행 후 기록 추적이 쉬워집니다.</dd>
                   </div>
                 </dl>
               </div>
               <figure class="project-visual project-visual--wide">
-                <img src="./assets/project_stock_preview.png" alt="투자 조건 검증 대시보드 화면" />
-                <figcaption>종목 후보, 조건 검증, 자동매매 실행 전 확인 상태를 분리해 보여주는 워크벤치 화면</figcaption>
+                <img src="./assets/kiwom_autotrade_positions.png" alt="주식 자동매매 포지션과 실행 상태 화면" />
+                <figcaption>자동매매 모드, 보유 포지션, 주문 이력, 리스크 안내를 분리해 보여주는 실행 관리 화면</figcaption>
               </figure>
             </article>
 
             <article class="project-detail project-detail--wide" data-project="mcu" hidden>
               <div class="project-copy">
                 <p class="project-kicker">Web-based MCU Simulator</p>
-                <h3>웹 기반 MCU 시뮬레이션 학습 도구</h3>
+                <h3>코드를 입력하고 전압·전류·레지스터 변화를 확인하는 웹 기반 MCU 교육 시뮬레이터</h3>
                 <p>
-                  브라우저에서 가상 보드, 레지스터 값, 신호 흐름, 실행 제어를 함께 확인하는 MCU
-                  학습 도구입니다. 실제 장비 없이도 코드 실행에 따라 보드 상태가 어떻게 바뀌는지
-                  따라볼 수 있게 만들었습니다.
+                  브라우저에서 직접 코드를 입력하고 실행하면서 가상 보드, 레지스터 값, 전압·전류 상태,
+                  신호 흐름을 함께 확인하는 MCU 교육용 사이트입니다. 실제 장비 없이도 코드와 레지스터 설정이
+                  회로 상태에 어떤 영향을 주는지 가상화해 반복 학습할 수 있게 만들었습니다.
                 </p>
                 <ul class="feature-list">
-                  <li>보드 상태와 레지스터 표시</li>
-                  <li>신호 흐름과 제어 경로 시각화</li>
-                  <li>실행/정지 등 학습용 제어</li>
-                  <li>장비 없이 흐름 복습</li>
+                  <li>브라우저 코드 입력과 가상 실행</li>
+                  <li>레지스터 설정값 실시간 확인</li>
+                  <li>전압·전류·신호 흐름 시각화</li>
+                  <li>교육용 MCU 동작 가상화</li>
                 </ul>
                 <dl class="proof-list">
                   <div>
                     <dt>해결한 문제</dt>
-                    <dd>임베디드 학습은 코드, 레지스터, 보드 상태를 따로 확인해야 해서 실행 흐름을 이해하기 어렵습니다.</dd>
+                    <dd>실제 코드를 입력해도 레지스터, 전압·전류, 보드 상태 변화를 따로 확인해야 하면 MCU 실행 흐름을 이해하기 어렵습니다.</dd>
                   </div>
                   <div>
                     <dt>구현한 방식</dt>
-                    <dd>가상 보드, 레지스터 표시, 신호 흐름, 실행 제어를 브라우저 화면에 묶었습니다.</dd>
+                    <dd>코드 입력, 빌드·실행 제어, 레지스터 설정, 가상 보드의 전압·전류와 신호 흐름을 브라우저 화면에 묶었습니다.</dd>
                   </div>
                   <div>
                     <dt>확인 가능한 결과</dt>
-                    <dd>장비 없이도 코드 실행에 따른 상태 변화를 한 화면에서 복습할 수 있습니다.</dd>
+                    <dd>별도 장비 없이도 코드 실행에 따른 레지스터와 신호 상태 변화를 웹 화면에서 반복 학습할 수 있습니다.</dd>
                   </div>
                 </dl>
               </div>
               <figure class="project-visual project-visual--wide">
-                <img src="./assets/project_mcu_preview.png" alt="웹 기반 MCU 제어 학습 시뮬레이터 화면" />
-                <figcaption>가상 보드, 레지스터, 신호 흐름, 실행 제어를 함께 보여주는 웹 시뮬레이션 화면</figcaption>
+                <img src="./assets/virtual_mcu_editor.png" alt="코드 입력과 MCU 가상 실행을 함께 보여주는 웹 교육 시뮬레이터 화면" />
+                <figcaption>코드 입력, 빌드/실행, 레지스터 설정, 전압·전류와 신호 흐름을 함께 확인하는 교육용 MCU 가상화 화면</figcaption>
               </figure>
             </article>
           </div>
