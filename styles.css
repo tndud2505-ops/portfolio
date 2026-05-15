@@ -145,7 +145,7 @@ img {
 
 .tab-nav {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .tab-button {
@@ -168,7 +168,6 @@ img {
 .panel-number,
 .career-meta,
 .project-kicker,
-.review-role,
 .index-label {
   margin: 0;
   color: var(--muted);
@@ -215,8 +214,7 @@ img {
 .panel-head h2,
 .intro-lead h3,
 .career-item h3,
-.project-detail h3,
-.review-grid h3 {
+.project-detail h3 {
   margin: 0;
   font-family: var(--sans);
   font-weight: 700;
@@ -234,8 +232,7 @@ img {
 .hero p,
 .intro-lead p,
 .career-item p,
-.project-detail p,
-.review-grid p {
+.project-detail p {
   margin: 0;
   color: var(--muted);
   line-height: 1.86;
@@ -302,11 +299,33 @@ img {
   border: 1px solid var(--line);
 }
 
-.principle-strip span {
-  min-height: 82px;
+.principle-strip article {
+  min-height: 118px;
   padding: 22px;
   background: rgba(251, 250, 246, 0.8);
+}
+
+.principle-strip span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.principle-strip strong {
+  display: block;
+  margin-bottom: 8px;
   font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.principle-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.72;
 }
 
 .career-list {
@@ -328,6 +347,41 @@ img {
   font-size: clamp(1.45rem, 2.2vw, 2.35rem);
   line-height: 1.24;
   letter-spacing: -0.02em;
+}
+
+.career-scope {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 22px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.career-scope span {
+  display: grid;
+  gap: 8px;
+  min-height: 88px;
+  padding: 16px;
+  color: var(--muted);
+  background: rgba(251, 250, 246, 0.74);
+  font-size: 0.9rem;
+  line-height: 1.56;
+}
+
+.career-scope b {
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.career-meta {
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .image-placeholder {
@@ -799,27 +853,6 @@ img {
   border-top: 1px solid rgba(248, 245, 237, 0.14);
 }
 
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-
-.review-grid article {
-  display: grid;
-  gap: 14px;
-  min-height: 230px;
-  padding: 28px;
-  background: rgba(251, 250, 246, 0.76);
-}
-
-.review-grid h3 {
-  font-size: clamp(1.45rem, 2.4vw, 2.35rem);
-  line-height: 1.24;
-}
-
 @media (max-width: 1060px) {
   .site-header {
     position: static;
@@ -840,9 +873,12 @@ img {
   .career-item,
   .project-lab,
   .project-detail,
-  .review-grid,
   .agent-grid {
     grid-template-columns: 1fr;
+  }
+
+  .career-scope {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .agent-pane--lead {
@@ -882,9 +918,10 @@ img {
 
   .hero h1 {
     max-width: 100%;
-    font-size: clamp(1.54rem, 6.4vw, 1.96rem);
+    font-size: clamp(1.42rem, 6vw, 1.82rem);
     line-height: 1.18;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .hero p,
@@ -892,8 +929,8 @@ img {
   .proof-list dd,
   .feature-list li {
     max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: normal;
+    overflow-wrap: anywhere;
+    word-break: break-all;
   }
 
   .panel {
@@ -910,6 +947,10 @@ img {
     font-size: clamp(1.22rem, 5.4vw, 1.68rem);
     line-height: 1.22;
     overflow-wrap: break-word;
+  }
+
+  .career-scope {
+    grid-template-columns: 1fr;
   }
 
   .project-index {
