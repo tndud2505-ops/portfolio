@@ -824,6 +824,10 @@ img {
   border-top: 1px solid var(--line);
 }
 
+.project-detail[data-project="stock"] .project-screens figure:first-child {
+  grid-column: 1 / -1;
+}
+
 .process-map,
 .workflow-board {
   display: grid;
