@@ -32,7 +32,8 @@ body {
   font-family: var(--sans);
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 body::before {
@@ -72,7 +73,6 @@ img {
 .project-lab > *,
 .project-detail > *,
 .hero-copy,
-.hero-panel,
 .project-copy {
   min-width: 0;
 }
@@ -198,11 +198,11 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(340px, 0.42fr);
-  gap: 42px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
   min-height: auto;
-  padding: 12px 0 28px;
+  padding: 12px 0 34px;
   border-bottom: 1px solid var(--line-strong);
 }
 
@@ -216,23 +216,22 @@ img {
 .intro-lead h3,
 .career-item h3,
 .project-detail h3,
-.review-grid h3,
-.hero-panel strong {
+.review-grid h3 {
   margin: 0;
   font-family: var(--sans);
   font-weight: 700;
   text-wrap: balance;
+  word-break: keep-all;
 }
 
 .hero h1 {
-  max-width: 24ch;
+  max-width: 31ch;
   font-size: clamp(1.9rem, 2.55vw, 2.86rem);
   line-height: 1.16;
   letter-spacing: -0.032em;
 }
 
 .hero p,
-.hero-panel span,
 .intro-lead p,
 .career-item p,
 .project-detail p,
@@ -240,30 +239,12 @@ img {
   margin: 0;
   color: var(--muted);
   line-height: 1.86;
+  word-break: keep-all;
 }
 
 .hero-copy > p:last-child {
-  max-width: 52rem;
+  max-width: 58rem;
   font-size: 0.98rem;
-}
-
-.hero-panel {
-  display: grid;
-  gap: 14px;
-  padding: 8px 0 8px 26px;
-  background: transparent;
-  border: 0;
-  border-left: 1px solid var(--line-strong);
-}
-
-.hero-panel p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.hero-panel strong {
-  font-size: clamp(1.32rem, 1.9vw, 2rem);
-  line-height: 1.26;
 }
 
 .panel {
@@ -573,6 +554,8 @@ img {
   margin: 11px 0 0;
   color: #3f453f;
   line-height: 1.68;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .project-visual {
@@ -837,7 +820,6 @@ img {
   .career-item,
   .project-lab,
   .project-detail,
-  .proof-list,
   .review-grid,
   .agent-grid {
     grid-template-columns: 1fr;
@@ -880,24 +862,18 @@ img {
 
   .hero h1 {
     max-width: 100%;
-    font-size: clamp(1.66rem, 7.3vw, 2.12rem);
+    font-size: clamp(1.54rem, 6.4vw, 1.96rem);
     line-height: 1.18;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .hero p,
-  .hero-panel span,
-  .hero-panel strong,
   .project-detail p,
   .proof-list dd,
   .feature-list li {
     max-width: 100%;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: normal;
-  }
-
-  .hero-panel strong {
-    font-size: clamp(1.2rem, 5.8vw, 1.58rem);
   }
 
   .panel {
@@ -911,9 +887,9 @@ img {
 
   .panel-head h2 {
     max-width: 100%;
-    font-size: clamp(1.34rem, 6.1vw, 1.86rem);
+    font-size: clamp(1.22rem, 5.4vw, 1.68rem);
     line-height: 1.22;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .project-index {
@@ -945,7 +921,11 @@ img {
     max-width: 100%;
     font-size: clamp(1.2rem, 5.4vw, 1.55rem);
     line-height: 1.22;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+  }
+
+  .proof-list {
+    grid-template-columns: 1fr;
   }
 
   .proof-list div {
