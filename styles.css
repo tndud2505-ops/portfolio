@@ -211,7 +211,16 @@ img {
 
 .hero-copy {
   display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.72fr);
+  column-gap: 64px;
   gap: 16px;
+  align-items: start;
+}
+
+.hero-copy > .eyebrow,
+.hero-copy > h1,
+.hero-copy > p:not(.eyebrow) {
+  grid-column: 1;
 }
 
 .hero h1,
@@ -245,9 +254,23 @@ img {
   word-break: keep-all;
 }
 
-.hero-copy > p:last-child {
+.hero-copy > p:not(.eyebrow) {
   max-width: 58rem;
   font-size: 0.98rem;
+}
+
+.hero-flow-visual {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  align-self: center;
+  margin: 6px 0 0;
+  padding: 12px;
+  background: rgba(251, 250, 246, 0.58);
+  border: 1px solid rgba(31, 33, 29, 0.12);
+}
+
+.hero-flow-visual img {
+  border: 1px solid rgba(31, 33, 29, 0.14);
 }
 
 .hero-career-summary {
@@ -274,6 +297,49 @@ img {
 .hero-career-summary b {
   color: var(--accent);
   font-size: 0.82rem;
+}
+
+.hero-summary-lines {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  max-width: 72rem;
+  margin-top: 12px;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-summary-lines article {
+  min-height: 138px;
+  padding: 20px 22px 20px 0;
+  border-right: 1px solid var(--line);
+}
+
+.hero-summary-lines article + article {
+  padding-left: 22px;
+}
+
+.hero-summary-lines span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--faint);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-summary-lines strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.hero-summary-lines p {
+  max-width: 24rem;
+  font-size: 0.94rem;
+  line-height: 1.72;
 }
 
 .resume-ledger {
@@ -1231,6 +1297,7 @@ img {
   }
 
   .hero,
+  .hero-copy,
   .hero-archive-grid,
   .intro-layout,
   .career-item,
@@ -1241,6 +1308,19 @@ img {
   .project-detail,
   .agent-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-copy > .eyebrow,
+  .hero-copy > h1,
+  .hero-copy > p:not(.eyebrow),
+  .hero-flow-visual,
+  .hero-summary-lines {
+    grid-column: 1;
+  }
+
+  .hero-flow-visual {
+    grid-row: auto;
+    margin-top: 8px;
   }
 
   .career-scope {
@@ -1332,8 +1412,17 @@ img {
     overflow-wrap: break-word;
   }
 
-  .hero-career-summary {
+  .hero-career-summary,
+  .hero-summary-lines {
     grid-template-columns: 1fr;
+  }
+
+  .hero-summary-lines article,
+  .hero-summary-lines article + article {
+    min-height: 0;
+    padding: 18px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .resume-entry header,

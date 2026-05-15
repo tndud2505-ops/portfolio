@@ -1,0 +1,38 @@
+<svg width="760" height="520" viewBox="0 0 760 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">자동차 임베디드 실무 흐름</title>
+  <desc id="desc">동아전기부품의 액추에이터 제어, LS Automotive의 바디 제어기, MOBASE ASEC의 AUTOSAR 자동화로 이어지는 이력 흐름을 선과 문서 형태로 정리한 개념도</desc>
+  <rect width="760" height="520" fill="#F7F4EE"/>
+  <path d="M0 65H760M0 130H760M0 195H760M0 260H760M0 325H760M0 390H760M0 455H760M95 0V520M190 0V520M285 0V520M380 0V520M475 0V520M570 0V520M665 0V520" stroke="#DED8CC" stroke-width="1"/>
+  <text x="56" y="58" fill="#315B48" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="3">CAREER FLOW MAP</text>
+  <text x="56" y="94" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="30" font-weight="700">제어 대상과 검증 방식이 확장된 흐름</text>
+  <path d="M108 258C160 178 222 178 276 258C330 338 392 338 446 258C500 178 562 178 616 258" stroke="#315B48" stroke-width="3" stroke-linecap="round"/>
+  <g>
+    <rect x="56" y="172" width="178" height="154" rx="0" fill="#FBFAF6" stroke="#CFC7BA"/>
+    <text x="76" y="203" fill="#315B48" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2">01 ACTUATOR</text>
+    <text x="76" y="235" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="22" font-weight="700">냉매 밸브</text>
+    <text x="76" y="263" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="22" font-weight="700">액추에이터 제어</text>
+    <text x="76" y="295" fill="#666A60" font-family="Noto Sans KR, sans-serif" font-size="14">PMSM · 위치 판단 · 재시도</text>
+  </g>
+  <g>
+    <rect x="291" y="204" width="178" height="154" rx="0" fill="#FBFAF6" stroke="#CFC7BA"/>
+    <text x="311" y="235" fill="#315B48" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2">02 BODY ECU</text>
+    <text x="311" y="267" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="22" font-weight="700">SCM · PSU</text>
+    <text x="311" y="295" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="22" font-weight="700">바디 제어기</text>
+    <text x="311" y="327" fill="#666A60" font-family="Noto Sans KR, sans-serif" font-size="14">MBD · 통신 · 기능안전</text>
+  </g>
+  <g>
+    <rect x="526" y="172" width="178" height="154" rx="0" fill="#FBFAF6" stroke="#CFC7BA"/>
+    <text x="546" y="203" fill="#315B48" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2">03 AUTOSAR</text>
+    <text x="546" y="235" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="22" font-weight="700">코드 생성</text>
+    <text x="546" y="263" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="22" font-weight="700">검증 자동화</text>
+    <text x="546" y="295" fill="#666A60" font-family="Noto Sans KR, sans-serif" font-size="14">ARXML · WSL/GCC · 반복 검증</text>
+  </g>
+  <g fill="#315B48">
+    <circle cx="108" cy="258" r="7"/>
+    <circle cx="380" cy="338" r="7"/>
+    <circle cx="616" cy="258" r="7"/>
+  </g>
+  <path d="M56 418H704" stroke="#A9A195"/>
+  <text x="56" y="452" fill="#1F211D" font-family="Noto Sans KR, sans-serif" font-size="17" font-weight="600">핵심 방향</text>
+  <text x="156" y="452" fill="#4E554D" font-family="Noto Sans KR, sans-serif" font-size="16">실제 동작하는 제어 로직을 만들고, 반복 검증이 필요한 부분은 기록과 자동화로 남기는 개발자</text>
+</svg>
