@@ -839,9 +839,9 @@ img {
 .project-visual {
   align-self: center;
   margin: 0;
-  background: #fff;
-  border: 1px solid rgba(31, 33, 29, 0.18);
-  box-shadow: 0 12px 30px rgba(63, 58, 44, 0.07);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .project-visual img {
@@ -850,6 +850,8 @@ img {
   height: auto;
   object-fit: cover;
   object-position: top center;
+  background: #fff;
+  border: 1px solid rgba(31, 33, 29, 0.18);
   filter: saturate(0.96) contrast(0.98);
 }
 
@@ -902,11 +904,11 @@ img {
 }
 
 .project-visual figcaption {
-  padding: 13px 15px;
+  padding: 10px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.55;
-  border-top: 1px solid var(--line);
+  border-top: 0;
 }
 
 .project-screens {
@@ -920,10 +922,10 @@ img {
 .project-screens figure {
   min-width: 0;
   margin: 0;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(31, 33, 29, 0.16);
-  box-shadow: 0 12px 28px rgba(63, 58, 44, 0.06);
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .project-screens img {
@@ -931,14 +933,16 @@ img {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top center;
+  background: #fff;
+  border: 1px solid rgba(31, 33, 29, 0.16);
 }
 
 .project-screens figcaption {
-  padding: 12px 14px;
+  padding: 10px 0 0;
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.55;
-  border-top: 1px solid var(--line);
+  border-top: 0;
 }
 
 .project-detail[data-project="stock"] .project-screens figure:first-child {
@@ -948,10 +952,10 @@ img {
 .process-map,
 .workflow-board {
   display: grid;
-  gap: 1px;
-  padding: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 0;
+  padding: 0;
+  background: transparent;
+  border-top: 1px solid var(--line-strong);
 }
 
 .process-map {
@@ -959,12 +963,13 @@ img {
 }
 
 .process-map span {
-  display: grid;
-  place-items: center;
-  min-height: 118px;
-  padding: 14px;
+  display: flex;
+  align-items: center;
+  min-height: 82px;
+  padding: 14px 14px 14px 0;
   color: var(--ink);
-  background: #fff;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
   font-weight: 700;
 }
 
@@ -976,9 +981,10 @@ img {
 .workflow-board div {
   display: grid;
   gap: 8px;
-  min-height: 82px;
-  padding: 18px;
-  background: #fff;
+  min-height: 0;
+  padding: 16px 0;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
 }
 
 .workflow-board strong {
@@ -999,7 +1005,7 @@ img {
     radial-gradient(circle at 22% 12%, rgba(125, 186, 151, 0.16), transparent 32%),
     #161914;
   border: 1px solid rgba(31, 33, 29, 0.42);
-  box-shadow: 0 18px 42px rgba(63, 58, 44, 0.14);
+  box-shadow: none;
 }
 
 .agent-shell {
