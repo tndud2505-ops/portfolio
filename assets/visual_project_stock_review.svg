@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">주식 조건 검토 화면</title>
+  <desc id="desc">조건 평가, 보유 상태, 주문 이력, 실행 전 안전 확인 단계를 분리한 검토 화면</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; fill: #1f211d; }
+      .mono { font-family: "IBM Plex Mono", "Consolas", monospace; letter-spacing: .08em; }
+      .title { font-size: 34px; font-weight: 800; letter-spacing: -.03em; }
+      .label { font-size: 20px; font-weight: 800; fill: #2f5b49; }
+      .small { font-size: 16px; fill: #5e665e; }
+      .card { fill: #fbfaf6; stroke: #d4c8b7; stroke-width: 2; }
+      .soft { fill: #edf3ea; stroke: #abc3ad; stroke-width: 2; }
+      .accent { fill: #f0dfce; stroke: #b17b4d; stroke-width: 2; }
+      .line { fill: none; stroke: #2f5b49; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2f5b49"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f7f4ee"/>
+  <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200M0 630H1200M100 0V720M200 0V720M300 0V720M400 0V720M500 0V720M600 0V720M700 0V720M800 0V720M900 0V720M1000 0V720M1100 0V720" stroke="#e5ded3"/>
+  <text x="56" y="58" class="mono small">STOCK CONDITION REVIEW</text>
+  <text x="56" y="100" class="title">판단 근거와 실행 기록을 분리해서 보는 화면</text>
+
+  <rect x="58" y="154" width="250" height="384" rx="22" class="card"/>
+  <text x="90" y="198" class="label">조건 평가</text>
+  <text x="90" y="236" class="small">MA · ATR · 거래량 · RS</text>
+  <path d="M92 330 L130 304 L168 320 L206 256 L260 278" fill="none" stroke="#2f5b49" stroke-width="5"/>
+  <rect x="90" y="386" width="170" height="44" rx="14" class="soft"/>
+  <text x="112" y="414" class="small">후보 점검 결과</text>
+  <text x="90" y="476" class="small">투자 추천이 아니라</text>
+  <text x="90" y="504" class="small">조건 충족 여부 기록</text>
+
+  <rect x="404" y="154" width="270" height="150" rx="22" class="soft"/>
+  <text x="438" y="198" class="label">보유 상태</text>
+  <text x="438" y="236" class="small">포지션, 미체결 주문</text>
+  <text x="438" y="264" class="small">중복 실행 여부 확인</text>
+
+  <rect x="404" y="362" width="270" height="176" rx="22" class="card"/>
+  <text x="438" y="406" class="label">주문 이력</text>
+  <text x="438" y="444" class="small">언제, 어떤 조건에서</text>
+  <text x="438" y="472" class="small">실행했는지 기록</text>
+  <rect x="438" y="496" width="184" height="30" rx="10" fill="#f0dfce"/>
+
+  <rect x="790" y="190" width="320" height="300" rx="26" class="accent"/>
+  <text x="832" y="238" class="label">실행 전 안전 확인</text>
+  <text x="832" y="284" class="small">데이터 최신성</text>
+  <text x="832" y="324" class="small">매수 가능 시간</text>
+  <text x="832" y="364" class="small">손실 한도</text>
+  <text x="832" y="404" class="small">보유·미체결 주문</text>
+  <rect x="832" y="434" width="210" height="40" rx="14" fill="#fff"/>
+  <text x="860" y="460" class="small">통과 후 실행 기록</text>
+
+  <path class="line" d="M308 344 C356 330 362 232 404 230"/>
+  <path class="line" d="M308 380 C356 408 362 442 404 444"/>
+  <path class="line" d="M674 230 C732 230 748 300 790 320"/>
+  <path class="line" d="M674 450 C732 450 748 404 790 392"/>
+
+  <rect x="58" y="610" width="1052" height="52" rx="16" fill="#fff" stroke="#d8cebd"/>
+  <text x="90" y="643" class="small">목적: 매매를 대신 판단하지 않고, 실행 전 조건과 근거가 남도록 검토 흐름을 분리합니다.</text>
+</svg>

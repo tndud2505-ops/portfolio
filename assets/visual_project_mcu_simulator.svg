@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">웹 기반 MCU 시뮬레이터</title>
+  <desc id="desc">코드 실행에 따라 가상 MCU 레지스터와 주변장치 신호가 바뀌는 학습용 화면</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; fill: #1f211d; }
+      .mono { font-family: "IBM Plex Mono", "Consolas", monospace; letter-spacing: .06em; }
+      .title { font-size: 34px; font-weight: 800; letter-spacing: -.03em; }
+      .label { font-size: 20px; font-weight: 800; fill: #2f5b49; }
+      .small { font-size: 16px; fill: #5e665e; }
+      .card { fill: #fbfaf6; stroke: #d4c8b7; stroke-width: 2; }
+      .chip { fill: #fff; stroke: #1f211d; stroke-width: 3; }
+      .soft { fill: #edf3ea; stroke: #abc3ad; stroke-width: 2; }
+      .signal { fill: none; stroke: #b06c32; stroke-width: 4; }
+      .line { fill: none; stroke: #2f5b49; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2f5b49"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f7f4ee"/>
+  <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200M0 630H1200M100 0V720M200 0V720M300 0V720M400 0V720M500 0V720M600 0V720M700 0V720M800 0V720M900 0V720M1000 0V720M1100 0V720" stroke="#e5ded3"/>
+  <text x="56" y="58" class="mono small">WEB MCU SIMULATOR</text>
+  <text x="56" y="100" class="title">코드 실행과 내부 상태 변화를 한 화면에서 보기</text>
+
+  <rect x="58" y="154" width="280" height="430" rx="22" class="card"/>
+  <text x="90" y="198" class="label">코드 입력</text>
+  <rect x="90" y="228" width="214" height="224" rx="14" fill="#222620"/>
+  <text x="112" y="266" fill="#d7e8d8" font-size="15" class="mono">while(run) {</text>
+  <text x="132" y="300" fill="#d7e8d8" font-size="15" class="mono">GPIO = HIGH;</text>
+  <text x="132" y="334" fill="#d7e8d8" font-size="15" class="mono">PWM += tick;</text>
+  <text x="132" y="368" fill="#d7e8d8" font-size="15" class="mono">ADC.read();</text>
+  <text x="112" y="402" fill="#d7e8d8" font-size="15" class="mono">}</text>
+  <rect x="90" y="486" width="92" height="42" rx="14" class="soft"/>
+  <text x="116" y="514" class="small">Run</text>
+  <rect x="196" y="486" width="92" height="42" rx="14" fill="#fff" stroke="#d4c8b7"/>
+  <text x="220" y="514" class="small">Step</text>
+
+  <rect x="474" y="198" width="270" height="250" rx="26" class="chip"/>
+  <text x="570" y="330" font-size="34" font-weight="800">MCU</text>
+  <text x="516" y="476" class="label">레지스터 상태</text>
+  <text x="516" y="512" class="small">GPIO, ADC, PWM, UART</text>
+  <text x="516" y="540" class="small">tick 단위로 값 변화</text>
+
+  <rect x="864" y="162" width="238" height="130" rx="20" class="soft"/>
+  <text x="898" y="206" class="label">주변장치 신호</text>
+  <path class="signal" d="M902 250 H936 V222 H972 V250 H1010 V222 H1048"/>
+  <rect x="864" y="366" width="238" height="150" rx="20" class="card"/>
+  <text x="898" y="410" class="label">가상 보드</text>
+  <text x="898" y="446" class="small">입력값, 인터럽트</text>
+  <text x="898" y="474" class="small">상태 변화 확인</text>
+
+  <path class="line" d="M338 350 C408 350 424 322 474 322"/>
+  <path class="line" d="M744 290 C804 250 820 226 864 226"/>
+  <path class="line" d="M744 364 C804 404 820 432 864 432"/>
+
+  <rect x="58" y="626" width="1044" height="50" rx="16" fill="#fff" stroke="#d8cebd"/>
+  <text x="90" y="658" class="small">목적: 장비가 없어도 코드, 레지스터, 주변장치 신호가 어떻게 이어지는지 단계별로 확인하는 학습 환경입니다.</text>
+</svg>

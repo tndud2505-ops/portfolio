@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" role="img" aria-labelledby="title desc">
+  <title id="title">AUTOSAR 설정 자동화 파이프라인</title>
+  <desc id="desc">ARXML 설정을 추출해 코드 생성 입력으로 변환하고 빌드 환경에서 결과를 확인하는 흐름</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; fill: #1f211d; }
+      .mono { font-family: "IBM Plex Mono", "Consolas", monospace; letter-spacing: .08em; }
+      .title { font-size: 28px; font-weight: 800; letter-spacing: -.03em; }
+      .label { font-size: 18px; font-weight: 800; fill: #2f5b49; }
+      .small { font-size: 14px; fill: #5f665d; }
+      .box { fill: #fbfaf6; stroke: #d4c8b7; stroke-width: 2; }
+      .soft { fill: #edf3ea; stroke: #abc3ad; stroke-width: 2; }
+      .line { fill: none; stroke: #2f5b49; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2f5b49"/>
+    </marker>
+  </defs>
+  <rect width="820" height="560" fill="#f7f4ee"/>
+  <path d="M0 70H820M0 140H820M0 210H820M0 280H820M0 350H820M0 420H820M0 490H820M70 0V560M140 0V560M210 0V560M280 0V560M350 0V560M420 0V560M490 0V560M560 0V560M630 0V560M700 0V560M770 0V560" stroke="#e6dfd4"/>
+  <text x="42" y="48" class="mono small">AUTOSAR AUTOMATION</text>
+  <text x="42" y="84" class="title">설정 추출부터 빌드 확인까지 반복 작업 자동화</text>
+
+  <rect x="44" y="170" width="150" height="118" rx="18" class="soft"/>
+  <text x="82" y="216" class="label">ARXML</text>
+  <text x="72" y="248" class="small">설정값 입력</text>
+
+  <rect x="244" y="170" width="150" height="118" rx="18" class="box"/>
+  <text x="278" y="216" class="label">추출</text>
+  <text x="272" y="248" class="small">필요 값 파싱</text>
+
+  <rect x="444" y="170" width="150" height="118" rx="18" class="soft"/>
+  <text x="476" y="216" class="label">변환</text>
+  <text x="466" y="248" class="small">생성 입력 구성</text>
+
+  <rect x="644" y="170" width="132" height="118" rx="18" class="box"/>
+  <text x="676" y="216" class="label">C 코드</text>
+  <text x="670" y="248" class="small">결과 생성</text>
+
+  <path class="line" d="M194 230H244"/>
+  <path class="line" d="M394 230H444"/>
+  <path class="line" d="M594 230H644"/>
+
+  <rect x="144" y="374" width="220" height="90" rx="18" class="box"/>
+  <text x="182" y="414" class="label">빌드 환경</text>
+  <text x="182" y="444" class="small">WSL / GCC 결과 확인</text>
+
+  <rect x="456" y="374" width="220" height="90" rx="18" class="soft"/>
+  <text x="494" y="414" class="label">검증 기록</text>
+  <text x="494" y="444" class="small">반복 확인 시간 감소</text>
+
+  <path class="line" d="M710 288 C710 336 324 330 254 374"/>
+  <path class="line" d="M364 418H456"/>
+</svg>

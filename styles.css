@@ -598,6 +598,26 @@ img {
   object-position: center 52%;
 }
 
+.project-visual--diagram img,
+.project-detail[data-project="ops"] .project-visual--diagram img,
+.project-detail[data-project="mcu"] .project-visual--diagram img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: #f7f4ee;
+  filter: none;
+}
+
+.career-visual {
+  align-self: stretch;
+}
+
+.career-visual img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #f7f4ee;
+}
+
 .project-visual.tall {
   display: grid;
   justify-items: center;

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" role="img" aria-labelledby="title desc">
+  <title id="title">모터 액추에이터 제어 흐름도</title>
+  <desc id="desc">PMSM 모터가 기어를 거쳐 액추에이터를 움직이고 냉매 유로를 여닫는 제어 흐름</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; fill: #1f211d; }
+      .mono { font-family: "IBM Plex Mono", "Consolas", monospace; letter-spacing: .08em; }
+      .title { font-size: 28px; font-weight: 800; letter-spacing: -.03em; }
+      .label { font-size: 18px; font-weight: 800; fill: #2f5b49; }
+      .small { font-size: 14px; fill: #5f665d; }
+      .box { fill: #fbfaf6; stroke: #d4c8b7; stroke-width: 2; }
+      .soft { fill: #edf3ea; stroke: #abc3ad; stroke-width: 2; }
+      .line { fill: none; stroke: #2f5b49; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2f5b49"/>
+    </marker>
+  </defs>
+  <rect width="820" height="560" fill="#f7f4ee"/>
+  <path d="M0 70H820M0 140H820M0 210H820M0 280H820M0 350H820M0 420H820M0 490H820M70 0V560M140 0V560M210 0V560M280 0V560M350 0V560M420 0V560M490 0V560M560 0V560M630 0V560M700 0V560M770 0V560" stroke="#e6dfd4"/>
+  <text x="42" y="48" class="mono small">MOTOR ACTUATOR CONTROL</text>
+  <text x="42" y="84" class="title">모터 구동과 위치 판단으로 유로를 여닫는 흐름</text>
+
+  <rect x="42" y="150" width="160" height="120" rx="18" class="soft"/>
+  <text x="74" y="196" class="label">PMSM 모터</text>
+  <text x="74" y="228" class="small">상전환 · 구동 시퀀스</text>
+  <circle cx="126" cy="242" r="20" fill="none" stroke="#2f5b49" stroke-width="4"/>
+  <path d="M126 222V262M106 242H146" stroke="#2f5b49" stroke-width="4"/>
+
+  <rect x="258" y="150" width="150" height="120" rx="18" class="box"/>
+  <text x="304" y="196" class="label">기어</text>
+  <text x="290" y="228" class="small">회전력 전달</text>
+
+  <rect x="464" y="150" width="160" height="120" rx="18" class="soft"/>
+  <text x="502" y="196" class="label">액추에이터</text>
+  <text x="496" y="228" class="small">목표 위치 이동</text>
+
+  <rect x="660" y="150" width="120" height="120" rx="18" class="box"/>
+  <text x="694" y="196" class="label">유로</text>
+  <text x="682" y="228" class="small">열림/닫힘</text>
+
+  <path class="line" d="M202 210H258"/>
+  <path class="line" d="M408 210H464"/>
+  <path class="line" d="M624 210H660"/>
+
+  <rect x="116" y="340" width="590" height="106" rx="20" fill="#fff" stroke="#d8cebd" stroke-width="2"/>
+  <text x="150" y="382" class="label">제어 판단</text>
+  <text x="150" y="414" class="small">zero crossing 감지 · sensorless 위치 판단 · STALL 감지 · 재시도 · 목표 위치 정지</text>
+  <path class="line" d="M410 340 C410 300 544 300 544 270"/>
+  <path class="line" d="M410 340 C410 302 122 302 122 270"/>
+</svg>

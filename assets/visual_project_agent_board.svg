@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI 작업 분업 보드</title>
+  <desc id="desc">하나의 요청을 역할별 에이전트 세션으로 나누고 결과를 다시 통합하는 작업 구조</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; fill: #1f211d; }
+      .mono { font-family: "IBM Plex Mono", "Consolas", monospace; letter-spacing: .08em; }
+      .title { font-size: 34px; font-weight: 800; letter-spacing: -.03em; }
+      .label { font-size: 20px; font-weight: 800; fill: #2f5b49; }
+      .small { font-size: 16px; fill: #5e665e; }
+      .panel { fill: #fbfaf6; stroke: #cfc5b6; stroke-width: 2; }
+      .lead { fill: #edf3ea; stroke: #9fb9a6; stroke-width: 2; }
+      .dark { fill: #171b16; }
+      .line { fill: none; stroke: #2f5b49; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2f5b49"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f7f4ee"/>
+  <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200M0 630H1200M100 0V720M200 0V720M300 0V720M400 0V720M500 0V720M600 0V720M700 0V720M800 0V720M900 0V720M1000 0V720M1100 0V720" stroke="#e5ded3"/>
+  <text x="56" y="58" class="mono small">MULTI AGENT WORKFLOW</text>
+  <text x="56" y="100" class="title">큰 요청을 역할별 세션으로 나누고 다시 합치는 구조</text>
+
+  <rect x="58" y="172" width="230" height="180" rx="20" class="lead"/>
+  <text x="86" y="214" class="label">요청 분석</text>
+  <text x="86" y="250" class="small">목표, 제약, 완료 기준 정리</text>
+  <text x="86" y="276" class="small">작업을 작은 단위로 분해</text>
+  <text x="86" y="318" class="mono small">PLAN / DISPATCH</text>
+
+  <rect x="388" y="150" width="260" height="132" rx="18" class="panel"/>
+  <text x="420" y="190" class="label">Agent 01 · 조사</text>
+  <text x="420" y="224" class="small">코드 구조와 관련 파일 확인</text>
+  <text x="420" y="250" class="small">근거와 리스크를 기록</text>
+  <rect x="388" y="314" width="260" height="132" rx="18" class="panel"/>
+  <text x="420" y="354" class="label">Agent 02 · 구현</text>
+  <text x="420" y="388" class="small">분리된 범위의 파일 수정</text>
+  <text x="420" y="414" class="small">변경 결과를 요약</text>
+  <rect x="388" y="478" width="260" height="132" rx="18" class="panel"/>
+  <text x="420" y="518" class="label">Agent 03 · 검증</text>
+  <text x="420" y="552" class="small">스크린샷, 테스트, 회귀 확인</text>
+  <text x="420" y="578" class="small">누락과 충돌을 보고</text>
+
+  <rect x="760" y="204" width="340" height="260" rx="24" class="dark"/>
+  <text x="800" y="252" fill="#f7f4ee" font-size="26" font-weight="800">메인 세션 통합 보드</text>
+  <rect x="804" y="292" width="250" height="44" rx="12" fill="#31352f"/>
+  <text x="828" y="321" fill="#f7f4ee" font-size="16">산출물 비교</text>
+  <rect x="804" y="356" width="250" height="44" rx="12" fill="#31352f"/>
+  <text x="828" y="385" fill="#f7f4ee" font-size="16">충돌·누락 확인</text>
+  <rect x="804" y="420" width="250" height="44" rx="12" fill="#496554"/>
+  <text x="828" y="449" fill="#f7f4ee" font-size="16">최종 반영</text>
+
+  <path class="line" d="M288 250 C338 190 350 190 388 204"/>
+  <path class="line" d="M288 270 C338 350 350 372 388 380"/>
+  <path class="line" d="M288 296 C338 528 350 540 388 544"/>
+  <path class="line" d="M648 216 C704 230 724 270 760 304"/>
+  <path class="line" d="M648 380 C702 380 726 380 760 378"/>
+  <path class="line" d="M648 544 C706 520 724 468 760 444"/>
+
+  <rect x="58" y="642" width="1042" height="48" rx="16" fill="#fff" stroke="#d8cebd"/>
+  <text x="86" y="673" class="small">한 화면의 목적: 여러 AI 세션이 따로 일하더라도 결정 이력과 결과를 잃지 않고 통합하는 구조를 보여줍니다.</text>
+</svg>

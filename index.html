@@ -115,8 +115,8 @@
                 STALL 감지, 재시도, 목표 위치 정지처럼 실제 동작 안정성에 영향을 주는 판단 흐름을 맡았습니다.
               </p>
             </div>
-            <figure class="image-placeholder">
-              <span>작업 흐름도 예정</span>
+            <figure class="project-visual project-visual--diagram career-visual">
+              <img src="./assets/visual_career_motor_actuator.svg" alt="모터 구동 시퀀스와 액추에이터 위치 판단 흐름도" />
               <figcaption>모터 → 기어 → 액추에이터 → 냉매 유로 개폐 흐름도</figcaption>
             </figure>
           </article>
@@ -132,8 +132,8 @@
                 구현뿐 아니라 문서 정리와 협업 산출물 관리까지 함께 다뤘습니다.
               </p>
             </div>
-            <figure class="image-placeholder">
-              <span>작업 흐름도 예정</span>
+            <figure class="project-visual project-visual--diagram career-visual">
+              <img src="./assets/visual_career_body_control.svg" alt="사용자 입력, 제어기, 진단과 fail-safe 흐름도" />
               <figcaption>차량 바디 제어기 기능 흐름 및 진단/fail-safe 관계도</figcaption>
             </figure>
           </article>
@@ -148,8 +148,8 @@
                 생성 결과를 WSL/GCC 빌드 환경에서 확인할 수 있게 만드는 방향으로 작업했습니다.
               </p>
             </div>
-            <figure class="image-placeholder">
-              <span>작업 흐름도 예정</span>
+            <figure class="project-visual project-visual--diagram career-visual">
+              <img src="./assets/visual_career_autosar_pipeline.svg" alt="ARXML 설정 추출과 코드 생성 검증 자동화 흐름도" />
               <figcaption>ARXML 입력 → 코드 생성 → 빌드/검증 파이프라인</figcaption>
             </figure>
           </article>
@@ -221,8 +221,8 @@
                   </div>
                 </dl>
               </div>
-              <figure class="project-visual tall">
-                <img src="./assets/project_ops_preview.png" alt="원격 작업 모니터링 콘솔 화면" />
+              <figure class="project-visual project-visual--diagram">
+                <img src="./assets/visual_project_remote_monitor.svg" alt="Discord 기반 원격 작업 모니터링 구조도" />
                 <figcaption>Discord 요청, 작업 상태, 로그 확인과 승인 기반 실행이 이어지는 관리 패널</figcaption>
               </figure>
             </article>
@@ -243,54 +243,8 @@
                   <li>사람이 개입하는 승인 큐</li>
                 </ul>
               </div>
-              <figure class="agent-harness" aria-label="AI 작업 분업 보드 구조도">
-                <div class="agent-shell">
-                  <header>
-                    <span>tmux harness</span>
-                    <strong>Codex Multi-Agent Workbench</strong>
-                  </header>
-                  <div class="agent-grid">
-                    <section class="agent-pane agent-pane--lead">
-                      <p>Agent 01 · Planner</p>
-                      <strong>$ codex split-request</strong>
-                      <span class="agent-status">ready</span>
-                      <code>scope: personal projects</code>
-                      <code>send: copy + visual tasks</code>
-                      <code>handoff: agent-02, agent-03</code>
-                    </section>
-                    <section class="agent-pane">
-                      <p>Agent 02 · Implementer</p>
-                      <strong>$ codex edit ui</strong>
-                      <span class="agent-status">working</span>
-                      <code>patch: index.html</code>
-                      <code>patch: styles.css</code>
-                      <code>reply: changed files</code>
-                    </section>
-                    <section class="agent-pane">
-                      <p>Agent 03 · Verifier</p>
-                      <strong>$ codex screenshot</strong>
-                      <span class="agent-status">checking</span>
-                      <code>open: #project-stock</code>
-                      <code>open: #project-mcu</code>
-                      <code>report: layout issues</code>
-                    </section>
-                    <section class="agent-pane">
-                      <p>Agent 04 · Reviewer</p>
-                      <strong>$ codex review-copy</strong>
-                      <span class="agent-status">reviewing</span>
-                      <code>tone: non-resume</code>
-                      <code>check: visitor clarity</code>
-                      <code>return: fixes</code>
-                    </section>
-                  </div>
-                  <div class="agent-flow">
-                    <span>Request</span>
-                    <span>Split</span>
-                    <span>Agents Talk</span>
-                    <span>Review</span>
-                    <span>Merge</span>
-                  </div>
-                </div>
+              <figure class="project-visual project-visual--diagram project-visual--wide">
+                <img src="./assets/visual_project_agent_board.svg" alt="여러 AI 작업 세션이 역할별로 나뉘어 결과를 합치는 구조도" />
                 <figcaption>하나의 작업판에서 여러 Codex 세션이 역할을 나누고, 결과를 공유한 뒤 메인 세션에서 통합하는 구조</figcaption>
               </figure>
               <dl class="proof-list">
@@ -339,8 +293,8 @@
                   </div>
                 </dl>
               </div>
-              <figure class="project-visual">
-                <img src="./assets/used_market_radar_clean.png" alt="중고거래 매물 레이더 대시보드 화면" />
+              <figure class="project-visual project-visual--diagram">
+                <img src="./assets/visual_project_market_tracker.svg" alt="중고거래 매물 수집, 필터링, 후보 비교 흐름도" />
                 <figcaption>검색 키워드, 사이트별 후보, 가격 범위와 병합 결과를 한 화면에서 비교하는 매물 추적 화면</figcaption>
               </figure>
             </article>
@@ -375,8 +329,8 @@
                   </div>
                 </dl>
               </div>
-              <figure class="project-visual project-visual--wide">
-                <img src="./assets/kiwom_autotrade_positions.png" alt="주식 조건 검토와 실행 상태 화면" />
+              <figure class="project-visual project-visual--diagram project-visual--wide">
+                <img src="./assets/visual_project_stock_review.svg" alt="주식 조건 검토와 실행 전 안전 확인 흐름도" />
                 <figcaption>검토 모드, 보유 포지션, 주문 이력, 리스크 안내를 분리해 보여주는 실행 관리 화면</figcaption>
               </figure>
             </article>
@@ -411,8 +365,8 @@
                   </div>
                 </dl>
               </div>
-              <figure class="project-visual project-visual--wide">
-                <img src="./assets/virtual_mcu_editor.png" alt="코드 입력과 MCU 가상 실행을 함께 보여주는 웹 교육 시뮬레이터 화면" />
+              <figure class="project-visual project-visual--diagram project-visual--wide">
+                <img src="./assets/visual_project_mcu_simulator.svg" alt="코드 실행에 따른 MCU 레지스터와 주변장치 신호 흐름도" />
                 <figcaption>코드 입력, 빌드/실행, 레지스터 설정, 입력값과 주변장치 신호 흐름을 함께 확인하는 교육용 MCU 가상화 화면</figcaption>
               </figure>
             </article>

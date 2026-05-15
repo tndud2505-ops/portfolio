@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" role="img" aria-labelledby="title desc">
+  <title id="title">차량 바디 제어 기능 흐름도</title>
+  <desc id="desc">사용자 입력이 통신과 제어 판단을 거쳐 바디 제어 기능과 진단, fail-safe로 이어지는 흐름</desc>
+  <defs>
+    <style>
+      text { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; fill: #1f211d; }
+      .mono { font-family: "IBM Plex Mono", "Consolas", monospace; letter-spacing: .08em; }
+      .title { font-size: 28px; font-weight: 800; letter-spacing: -.03em; }
+      .label { font-size: 18px; font-weight: 800; fill: #2f5b49; }
+      .small { font-size: 14px; fill: #5f665d; }
+      .box { fill: #fbfaf6; stroke: #d4c8b7; stroke-width: 2; }
+      .soft { fill: #edf3ea; stroke: #abc3ad; stroke-width: 2; }
+      .warn { fill: #f0dfce; stroke: #b17b4d; stroke-width: 2; }
+      .line { fill: none; stroke: #2f5b49; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2f5b49"/>
+    </marker>
+  </defs>
+  <rect width="820" height="560" fill="#f7f4ee"/>
+  <path d="M0 70H820M0 140H820M0 210H820M0 280H820M0 350H820M0 420H820M0 490H820M70 0V560M140 0V560M210 0V560M280 0V560M350 0V560M420 0V560M490 0V560M560 0V560M630 0V560M700 0V560M770 0V560" stroke="#e6dfd4"/>
+  <text x="42" y="48" class="mono small">BODY CONTROL FLOW</text>
+  <text x="42" y="84" class="title">사용자 입력이 차량 기능으로 이어지는 경로</text>
+
+  <rect x="56" y="156" width="160" height="110" rx="18" class="soft"/>
+  <text x="88" y="200" class="label">사용자 입력</text>
+  <text x="88" y="232" class="small">스위치 · 버튼 · 상태</text>
+
+  <rect x="282" y="156" width="160" height="110" rx="18" class="box"/>
+  <text x="326" y="200" class="label">통신</text>
+  <text x="312" y="232" class="small">CAN 신호 · 조건 수신</text>
+
+  <rect x="508" y="156" width="220" height="110" rx="18" class="soft"/>
+  <text x="548" y="200" class="label">제어 판단</text>
+  <text x="548" y="232" class="small">상태 전이 · 우선순위 · 출력</text>
+
+  <rect x="116" y="356" width="176" height="104" rx="18" class="box"/>
+  <text x="150" y="398" class="label">SCM / PSU</text>
+  <text x="150" y="430" class="small">기능 동작 흐름</text>
+
+  <rect x="336" y="356" width="176" height="104" rx="18" class="warn"/>
+  <text x="380" y="398" class="label">진단</text>
+  <text x="370" y="430" class="small">오류 조건 · DTC</text>
+
+  <rect x="556" y="356" width="176" height="104" rx="18" class="box"/>
+  <text x="596" y="398" class="label">Fail-safe</text>
+  <text x="592" y="430" class="small">안전 상태 전환</text>
+
+  <path class="line" d="M216 210H282"/>
+  <path class="line" d="M442 210H508"/>
+  <path class="line" d="M618 266 C520 316 274 320 204 356"/>
+  <path class="line" d="M618 266 C558 316 476 320 424 356"/>
+  <path class="line" d="M618 266 C648 314 648 328 644 356"/>
+</svg>
