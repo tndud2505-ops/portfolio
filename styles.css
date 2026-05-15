@@ -276,6 +276,77 @@ img {
   font-size: 0.82rem;
 }
 
+.resume-ledger {
+  display: grid;
+  max-width: 78rem;
+  margin-top: 14px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.resume-entry {
+  display: grid;
+  gap: 16px;
+  padding: 22px 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-entry header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.resume-entry h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.resume-entry header p {
+  margin-top: 6px;
+  color: #3f453f;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.resume-entry time {
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.resume-entry-body {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 10px 24px;
+  max-width: 68rem;
+}
+
+.resume-entry-body strong {
+  color: var(--accent);
+  font-size: 0.86rem;
+}
+
+.resume-entry-body p,
+.resume-entry-body ul {
+  margin: 0;
+  color: #3f453f;
+  line-height: 1.72;
+}
+
+.resume-entry-body ul {
+  padding-left: 1.05rem;
+}
+
+.resume-entry-body li + li {
+  margin-top: 4px;
+}
+
 .panel {
   padding-top: 30px;
 }
@@ -468,9 +539,9 @@ img {
 
 .career-detail {
   display: grid;
-  grid-template-columns: minmax(320px, 0.72fr) minmax(420px, 0.5fr);
+  grid-template-columns: minmax(360px, 0.78fr) minmax(420px, 0.55fr);
   gap: 34px;
-  align-items: center;
+  align-items: start;
   min-height: 430px;
   padding: 32px 0 12px;
   background:
@@ -489,6 +560,52 @@ img {
   font-size: clamp(1.42rem, 1.78vw, 2.08rem);
   line-height: 1.28;
   letter-spacing: -0.024em;
+}
+
+.career-resume-card {
+  display: grid;
+  margin-top: 4px;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.career-resume-card section {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 18px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.career-resume-card section:last-child {
+  border-bottom: 0;
+}
+
+.career-resume-card strong {
+  color: var(--accent);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.career-resume-card p,
+.career-resume-card ul {
+  margin: 0;
+  color: #3f453f;
+  line-height: 1.72;
+}
+
+.career-resume-card ul {
+  padding-left: 1.05rem;
+}
+
+.career-resume-card li + li {
+  margin-top: 6px;
+}
+
+.career-source-stack {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
 }
 
 .image-placeholder {
@@ -1103,6 +1220,21 @@ img {
 
   .hero-career-summary {
     grid-template-columns: 1fr;
+  }
+
+  .resume-entry header,
+  .resume-entry-body,
+  .career-resume-card section {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-entry header {
+    display: grid;
+    gap: 8px;
+  }
+
+  .resume-entry time {
+    white-space: normal;
   }
 
   .career-scope {
