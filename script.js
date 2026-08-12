@@ -186,7 +186,7 @@
   const hydrateCareerSource = async () => {
     if (
       !document.querySelector(
-        "[data-career-company], [data-career-direction-intro], [data-career-project-id]",
+        "[data-career-company], [data-career-project-id]",
       )
     ) {
       return;
@@ -256,31 +256,13 @@
         }
       });
 
-      const directionIntro = document.querySelector(
-        "[data-career-direction-intro]",
-      );
-      const directionList = document.querySelector(
-        "[data-career-direction-list]",
-      );
-      if (directionIntro) directionIntro.textContent = source.direction.intro;
-      if (directionList) {
-        directionList.replaceChildren(
-          ...source.direction.priorities.map((priority) => {
-            const item = document.createElement("li");
-            const title = document.createElement("strong");
-            const description = document.createElement("span");
-            title.textContent = priority.title;
-            description.textContent = priority.description;
-            item.append(title, description);
-            return item;
-          }),
-        );
-      }
-
       const projectsById = new Map(
         source.personalProjects.map((project) => [project.id, project]),
       );
-      document.querySelectorAll("[data-career-project-id]").forEach((card) => {
+      const projectCards = [
+        ...document.querySelectorAll("[data-career-project-id]"),
+      ];
+      projectCards.forEach((card) => {
         const project = projectsById.get(card.dataset.careerProjectId);
         if (!project) return;
 
@@ -308,6 +290,20 @@
           externalLink.href = project.externalUrl;
         }
       });
+
+      const projectPanel = document.querySelector("#project-panel");
+      if (projectPanel) {
+        const projectOrder = new Map(
+          source.personalProjects.map((project, index) => [project.id, index]),
+        );
+        projectCards
+          .sort(
+            (left, right) =>
+              (projectOrder.get(left.dataset.careerProjectId) ?? 999) -
+              (projectOrder.get(right.dataset.careerProjectId) ?? 999),
+          )
+          .forEach((card) => projectPanel.append(card));
+      }
 
       if (projectTabs.length) {
         const selected = projectTabs.find(
