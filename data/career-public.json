@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "1.0",
+  "lastVerified": "2026-08-06",
+  "profile": {
+    "name": "Kim Suyoung",
+    "nameKo": "김수영",
+    "headlineKo": "자동차 임베디드 SW 개발자 | AUTOSAR, MATLAB/Simulink, Python 자동화",
+    "headlineEn": "Automotive Embedded Software Engineer | MATLAB/Simulink, AUTOSAR, Python Automation",
+    "summaryKo": "자동차 제어기 양산 경험을 바탕으로 AUTOSAR/MBD 흐름과 Python 기반 검증 자동화를 연결하는 자동차 임베디드 SW 개발자입니다. 제어 로직, 생산 디버깅, 개발 흐름을 문서·도구·검증 가능한 결과로 구조화합니다.",
+    "summaryEn": "Automotive embedded software engineer connecting production controller experience, AUTOSAR/MBD workflows, and Python automation for repeatable engineering work.",
+    "publicLinks": {
+      "portfolio": "https://tndud2505-ops.github.io/Career_Profile/",
+      "github": "https://github.com/tndud2505-ops/Career_Profile"
+    }
+  },
+  "employment": [
+    {
+      "id": "mobase-asec",
+      "company": "MOBASE ASEC",
+      "periodLabel": "2026.01 ~ 재직중",
+      "role": "아키텍처 설계실 · R&D · 선임연구원",
+      "summary": "AUTOSAR ARXML의 RTE·설정 정보를 분석해 반복 코드를 생성하는 웹 기반 도구를 개발하고, 생성 결과의 검증과 개발 흐름 가시화를 연결했습니다.",
+      "detailPath": "./experience/mobase-asec.html",
+      "detailLabel": "AUTOSAR·Tooling 경력 흐름 보기",
+      "projects": [
+        {
+          "name": "AUTOSAR 기반 자동 코드 생성 툴",
+          "scope": "ARXML에서 RTE 이름과 설정 정보를 추출해 CAN 수신 타임아웃, NVM 상태 관리, I/O 입력 필터, RTE 인터페이스·설정 기반 반복 코드를 생성하고 설정 누락·오류를 검출했습니다."
+        },
+        {
+          "name": "코드 생성 신뢰성 고도화",
+          "scope": "생성 결과를 SiL 테스트 케이스와 WSL·GCC 기반 단위 검증에 연결했습니다. 테스트 케이스 검토와 반복 검증 절차는 핵심 코드 생성 기능의 신뢰성을 높이는 고도화 업무로 관리했습니다."
+        },
+        {
+          "name": "개발 흐름 고도화",
+          "scope": "ASPICE 문서 추적성, Git branch·commit·tag, CI 결과, 실패 단계, 테스트 목록과 Coverage 추이를 연결한 프로젝트 관리 Dashboard를 구성했습니다."
+        }
+      ],
+      "capabilities": [
+        "Python 기반 코드 생성·검증 도구 개발",
+        "AUTOSAR ARXML 구조·RTE 정보 분석",
+        "WSL·GCC 기반 단위 검증 및 자동 테스트 환경 구성",
+        "SiL 테스트 케이스·인스턴스 구성",
+        "Docker 기반 컨테이너와 CI/CD·배포 도구 활용"
+      ]
+    },
+    {
+      "id": "ls-automotive",
+      "company": "LS Automotive",
+      "periodLabel": "2023.10 ~ 2026.01 · 2년 4개월",
+      "role": "전장 SW 설계팀 · 연구원",
+      "summary": "SCM·PSU·통합제어기 프로젝트에서 요구사항을 MATLAB/Simulink 기반 ASW로 설계하고 MiL·AUTOSAR·ARXML·mobilgene·HW-SW 디버깅으로 연결했습니다.",
+      "detailPath": "./experience/ls-automotive.html",
+      "detailLabel": "SCM·PSU·AUTOSAR 개발 흐름 보기",
+      "projects": [
+        {
+          "name": "Steering Wheel Column Module Control · Platform 1.0",
+          "scope": "조향 칼럼 위치·메모리·승하차 편의 기능의 ASW를 설계하고 차량 통신·입출력 기능을 검증했습니다."
+        },
+        {
+          "name": "Steering Wheel Column Module Control · Platform 2.0",
+          "scope": "플랫폼 요구 사양에 맞춰 기능·설정을 적용하고 AUTOSAR 통합·검증과 모듈 대상 SiL 검증에 단기 참여했습니다."
+        },
+        {
+          "name": "Power Seat Unit Control · Platform 2.0",
+          "scope": "전동 시트 제어 기능을 구현·디버깅하고 ASIL-A 문맥의 기능안전 요구사항, 진단·Fail-safe, SCD/SDD 산출물과 인터페이스 검증을 지원했습니다."
+        },
+        {
+          "name": "통합제어기 선행과제",
+          "scope": "시트·램프·카메라의 명령·상태 관리 로직과 제어기 간 통신 인터페이스를 분석·구현·검증했습니다."
+        }
+      ],
+      "capabilities": [
+        "MATLAB/Simulink 기반 ASW 설계와 Test Harness 기반 MiL 검증",
+        "AUTOSAR Blockset 매핑과 ARXML 생성·내보내기",
+        "Port·Interface·Runnable·RTE 흐름의 mobilgene 연계",
+        "Python 기반 반복 설계·통합 작업 자동화",
+        "DC Motor 기반 바디 제어기 기능과 HW-SW 통합 디버깅",
+        "ASIL-A 지원, SCD/SDD 문서 작성과 제한된 SiL 참여"
+      ]
+    },
+    {
+      "id": "donga-electric-parts",
+      "company": "동아전기부품",
+      "periodLabel": "2022.03 ~ 2023.06 · 1년 4개월",
+      "role": "회로2팀 · 소프트웨어 담당 · 사원 2년차",
+      "summary": "냉매 밸브·PT 센서 액추에이터에서 LIN ASW와 Motor Driver SW를 개발하고, MCU 변경·3-PWM 구동·공정 매칭·양산 HW-SW 디버깅을 수행했습니다.",
+      "detailPath": "./experience/donga-electric-parts.html",
+      "detailLabel": "LIN·MCU·인버터·액추에이터 구조 보기",
+      "projects": [
+        {
+          "name": "냉매 밸브 액추에이터 1세대",
+          "scope": "MCU 업체 제공 Motor Driver 코드를 분석·활용해 제어 SW를 양산에 연계하고 제품 검증, 공정 매칭과 현장 이슈 대응을 수행했습니다."
+        },
+        {
+          "name": "냉매 밸브 액추에이터 2세대",
+          "scope": "반도체 수급에 따른 MCU 변경에 대응해 제어 흐름을 재설계하고 3-PWM 기반 Motor Driver SW와 게이트 드라이버 인터페이스를 직접 설계·디버깅했습니다."
+        },
+        {
+          "name": "PT 센서 액추에이터 · 선행",
+          "scope": "온도·압력 조건에서 니들 밸브 목표 위치를 계산·제어하는 로직을 구현하고 시제품 기능을 검증했습니다."
+        }
+      ],
+      "capabilities": [
+        "LIN 통신 기반 ASW와 Motor Driver SW 설계",
+        "3-PWM 기반 게이트 드라이버·3상 인버터 구동과 PMSM 위치 제어",
+        "MCU 주변장치 분석과 변경 대응",
+        "PMSM·BLDC·DC 모터 제어, 보호·재시동 로직",
+        "액추에이터 HW-SW 통합 디버깅과 양산 공정 매칭"
+      ]
+    }
+  ],
+  "supportingActivities": [
+    {
+      "name": "코멘토 강사 활동",
+      "role": "임베디드 SW 실습 강의",
+      "scope": [
+        "STM32 데이터시트 분석과 관련 SiL 환경 구성·실습",
+        "BMS·BLDC 모터 제어 실습 환경 구성과 기술 설명"
+      ]
+    }
+  ],
+  "direction": {
+    "title": "앞으로 수행하고 싶은 업무",
+    "intro": "툴 개발 자체가 목표는 아닙니다. 먼저 담당 아이템의 제어 원리·요구사항·설정·구현·검증 흐름에 대한 전문성을 쌓고, 그 과정에서 발견한 실제 문제를 개발자 친화적인 시스템으로 해결하고 싶습니다.",
+    "priorities": [
+      {
+        "title": "아이템 도메인 전문성",
+        "description": "AUTOSAR·통신·NVM·진단·모터 제어 등 담당 아이템의 요구사항, 제어 원리와 검증 흐름을 깊이 있게 이해"
+      },
+      {
+        "title": "개발 지원·검증 자동화",
+        "description": "도메인에서 반복되는 설정 누락과 개발 오류를 코드 생성, MiL·SiL·단위 검증, 배포 자동화로 사전 방지"
+      },
+      {
+        "title": "개발자 교육 시스템",
+        "description": "아이템별 학습 사이트와 문서·예제로 제품 구조와 개발 흐름을 설명 가능한 형태로 제공"
+      }
+    ]
+  },
+  "personalProjects": [
+    {
+      "id": "k-stock",
+      "name": "K Stock",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "종목 검색, 테마·산업군 필터, 점수 비교, 상세 차트를 하나의 읽기 전용 웹 서비스로 구현하고 배포",
+      "detailPath": "./projects/k-stock.html",
+      "externalUrl": "https://kstockclock.com/"
+    },
+    {
+      "id": "virtual-mcu",
+      "name": "Virtual MCU Training Environment",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "MCU 데이터시트 기반으로 C 코드 작성·실행과 GPIO·Register·Graph·Log 변화를 확인하는 가상 개발·학습 환경",
+      "detailPath": "./projects/virtual-mcu.html",
+      "externalUrl": "https://virtual-mcu-training-env.pages.dev/"
+    },
+    {
+      "id": "train-gallery",
+      "name": "Train Gallery",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "운동 영상을 날짜별로 기록하고 클립·자막·하이라이트 export까지 지원하는 모바일 앱",
+      "detailPath": "./projects/train-gallery.html"
+    },
+    {
+      "id": "auto-trading",
+      "name": "Auto Trading",
+      "category": "automation",
+      "categoryLabel": "자동화",
+      "description": "Kiwoom OpenAPI 기반으로 실행 후보, 차단 사유, 보유·체결 흐름을 관리하는 로컬 자동매매 운영 워크벤치",
+      "detailPath": "./projects/auto-trading.html"
+    },
+    {
+      "id": "codex-team",
+      "name": "Codex Team",
+      "category": "tool",
+      "categoryLabel": "개발 도구",
+      "description": "Operator·Chief·Specialists/Review 역할과 Issue·Discussion·Decision·Approval·Evidence를 관리하는 로컬 AI 작업 콘솔",
+      "detailPath": "./projects/codex-team.html"
+    },
+    {
+      "id": "jira-opsidian",
+      "name": "Jira Opsidian",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "Jira 이슈 트리·관계 맵·상세 패널을 하나의 화면에 연결한 개인 제품 콘셉트",
+      "detailPath": "./projects/jira-mini.html"
+    },
+    {
+      "id": "questora",
+      "name": "Questora",
+      "category": "tool",
+      "categoryLabel": "개발 도구",
+      "description": "GitHub·논문·웹·커뮤니티·OpenKB/Wiki를 질문 유형에 따라 탐색하고 근거와 HTML 보고서로 정리하는 리서치 에이전트",
+      "detailPath": "./projects/daily-automation.html"
+    },
+    {
+      "id": "used-market-agent",
+      "name": "USED PICK",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "여러 중고 플랫폼의 상품을 한 화면에서 검색하고 카테고리·가격·정렬 기준으로 비교하는 중고거래 통합 검색 사이트",
+      "detailPath": "./projects/used-market-agent.html",
+      "externalUrl": "https://www.used-pick.com/"
+    }
+  ]
+}

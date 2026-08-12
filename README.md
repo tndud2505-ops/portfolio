@@ -23,4 +23,5 @@
 
 - Virtual MCU: https://virtual-mcu-training-env.pages.dev/
 - K Stock: https://kstockclock.com/
+- USED PICK: https://www.used-pick.com/
 - GitHub: https://github.com/tndud2505-ops

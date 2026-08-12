@@ -183,6 +183,145 @@
 
   if (projectTabs.length) applyProjectFilter(projectTabs[0]);
 
+  const hydrateCareerSource = async () => {
+    if (
+      !document.querySelector(
+        "[data-career-company], [data-career-direction-intro], [data-career-project-id]",
+      )
+    ) {
+      return;
+    }
+    try {
+      const response = await fetch("./data/career-public.json", {
+        cache: "no-store",
+      });
+      if (!response.ok) return;
+      const source = await response.json();
+      const employmentById = new Map(
+        source.employment.map((item) => [item.id, item]),
+      );
+
+      document.querySelectorAll("[data-career-company]").forEach((article) => {
+        const record = employmentById.get(article.dataset.careerCompany);
+        if (!record) return;
+
+        const period = article.querySelector("time");
+        const company = article.querySelector(".record-heading h3");
+        const role = article.querySelector(".record-role");
+        const summary = article.querySelector("[data-career-summary]");
+        const projectList = article.querySelector("ul.record-bullets");
+        const capabilityList = article.querySelector("ol.record-skills");
+        const detailLink = article.querySelector("[data-career-detail-link]");
+
+        if (period) period.textContent = record.periodLabel;
+        if (company) company.textContent = record.company;
+        if (role) role.textContent = record.role;
+        if (summary) summary.textContent = record.summary;
+
+        if (projectList) {
+          projectList.replaceChildren(
+            ...record.projects.map((project) => {
+              const item = document.createElement("li");
+              const title = document.createElement("strong");
+              const scope = document.createElement("span");
+              title.textContent = project.name;
+              scope.textContent = project.scope;
+              item.append(title, scope);
+              return item;
+            }),
+          );
+        }
+
+        if (capabilityList) {
+          capabilityList.replaceChildren(
+            ...record.capabilities.map((capability) => {
+              const item = document.createElement("li");
+              const text = document.createElement("span");
+              text.textContent = capability;
+              item.append(text);
+              return item;
+            }),
+          );
+        }
+
+        if (detailLink) {
+          detailLink.href = record.detailPath;
+          detailLink.replaceChildren(
+            document.createTextNode(record.detailLabel),
+            Object.assign(document.createElement("span"), {
+              textContent: "→",
+            }),
+          );
+          detailLink.lastElementChild.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      const directionIntro = document.querySelector(
+        "[data-career-direction-intro]",
+      );
+      const directionList = document.querySelector(
+        "[data-career-direction-list]",
+      );
+      if (directionIntro) directionIntro.textContent = source.direction.intro;
+      if (directionList) {
+        directionList.replaceChildren(
+          ...source.direction.priorities.map((priority) => {
+            const item = document.createElement("li");
+            const title = document.createElement("strong");
+            const description = document.createElement("span");
+            title.textContent = priority.title;
+            description.textContent = priority.description;
+            item.append(title, description);
+            return item;
+          }),
+        );
+      }
+
+      const projectsById = new Map(
+        source.personalProjects.map((project) => [project.id, project]),
+      );
+      document.querySelectorAll("[data-career-project-id]").forEach((card) => {
+        const project = projectsById.get(card.dataset.careerProjectId);
+        if (!project) return;
+
+        card.dataset.projectCategory = project.category;
+        const title = card.querySelector(".project-card-body h3");
+        const description = card.querySelector(
+          ".project-card-body > p:not(.project-card-meta)",
+        );
+        const mediaLink = card.querySelector(".project-card-media");
+        const detailLink = [...card.querySelectorAll(".project-card-actions a")].find(
+          (link) => !link.target,
+        );
+        const externalLink = card.querySelector(
+          '.project-card-actions a[target="_blank"]',
+        );
+
+        if (title) title.textContent = project.name;
+        if (description) description.textContent = project.description;
+        if (mediaLink) {
+          mediaLink.href = project.detailPath;
+          mediaLink.setAttribute("aria-label", `${project.name} 상세 보기`);
+        }
+        if (detailLink) detailLink.href = project.detailPath;
+        if (externalLink && project.externalUrl) {
+          externalLink.href = project.externalUrl;
+        }
+      });
+
+      if (projectTabs.length) {
+        const selected = projectTabs.find(
+          (tab) => tab.dataset.projectFilter === "all",
+        );
+        if (selected) applyProjectFilter(selected);
+      }
+    } catch (_error) {
+      // Keep the authored HTML as a local/offline fallback when data is absent.
+    }
+  };
+
+  hydrateCareerSource();
+
   const evidenceImages = [
     ...document.querySelectorAll(
       ".case-section--evidence .case-gallery img",

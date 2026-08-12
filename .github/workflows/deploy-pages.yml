@@ -34,6 +34,7 @@ jobs:
           [ -f README.md ] && cp README.md _site/
           [ -f .nojekyll ] && cp .nojekyll _site/
           [ -d assets ] && cp -R assets _site/assets
+          [ -d data ] && cp -R data _site/data
           [ -d projects ] && cp -R projects _site/projects
 
       - name: Setup GitHub Pages
