@@ -35,6 +35,7 @@ jobs:
           [ -f .nojekyll ] && cp .nojekyll _site/
           [ -d assets ] && cp -R assets _site/assets
           [ -d data ] && cp -R data _site/data
+          [ -d experience ] && cp -R experience _site/experience
           [ -d projects ] && cp -R projects _site/projects
 
       - name: Setup GitHub Pages
