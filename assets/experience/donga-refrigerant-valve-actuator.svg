@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">완성 냉매 밸브 액추에이터와 두 냉매 유로</title>
+  <desc id="desc">액추에이터 내부의 제어 PCB와 PMSM, 감속 기어, 출력축이 밸브를 회전시키고, 밸브 개도 변화로 위쪽과 아래쪽 두 냉매 유로의 흐름을 조절하는 공개용 기구 구조도</desc>
+  <defs>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#d6dcd7"/>
+      <stop offset="0.45" stop-color="#f8faf8"/>
+      <stop offset="1" stop-color="#b6c0b8"/>
+    </linearGradient>
+    <linearGradient id="housing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8faf8"/>
+      <stop offset="1" stop-color="#dce3dd"/>
+    </linearGradient>
+    <marker id="arrow-blue" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto">
+      <path d="M0 0L13 6.5L0 13Z" fill="#4d7890"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto">
+      <path d="M0 0L13 6.5L0 13Z" fill="#b4773d"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12Z" fill="#315d4b"/>
+    </marker>
+    <style>
+      .sans { font-family: "IBM Plex Sans KR", "Noto Sans KR", Arial, sans-serif; }
+      .mono { font-family: "IBM Plex Mono", Consolas, monospace; }
+      .title { fill: #181a18; font-size: 42px; font-weight: 700; letter-spacing: -1.5px; }
+      .subtitle { fill: #657069; font-size: 20px; }
+      .eyebrow { fill: #315d4b; font-size: 17px; font-weight: 700; letter-spacing: 1.8px; }
+      .section { fill: #181a18; font-size: 24px; font-weight: 700; }
+      .label { fill: #181a18; font-size: 18px; font-weight: 700; }
+      .body { fill: #657069; font-size: 16px; }
+      .tiny { fill: #657069; font-size: 13px; }
+      .hair { stroke: #c4cec5; stroke-width: 2; fill: none; }
+      .dark { stroke: #181a18; stroke-width: 3; fill: none; }
+      .green { stroke: #315d4b; stroke-width: 4; fill: none; }
+      .blue { stroke: #4d7890; stroke-width: 8; fill: none; }
+      .amber { stroke: #b4773d; stroke-width: 8; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="960" fill="#f7f7f5"/>
+  <text x="64" y="62" class="mono eyebrow">REFRIGERANT VALVE ACTUATOR</text>
+  <text x="64" y="116" class="sans title">완성 액추에이터와 두 냉매 유로</text>
+  <text x="64" y="151" class="sans subtitle">PMSM 회전을 밸브 개도로 바꿔 양쪽 냉매 흐름을 조절하는 기구 구조</text>
+  <text x="1536" y="62" text-anchor="end" class="mono tiny">공개용 기구도 · 실제 치수/내부 형상 제외</text>
+  <line x1="64" y1="178" x2="1536" y2="178" class="hair"/>
+
+  <g aria-label="완성 액추에이터">
+    <text x="800" y="226" text-anchor="middle" class="mono eyebrow">COMPLETED ACTUATOR</text>
+
+    <path d="M548 300H1052L1018 556H582Z" fill="url(#housing)" stroke="#181a18" stroke-width="4"/>
+    <path d="M582 556H1018L978 610H622Z" fill="url(#metal)" stroke="#181a18" stroke-width="4"/>
+    <path d="M548 300L602 258H998L1052 300" fill="url(#metal)" stroke="#181a18" stroke-width="4"/>
+    <line x1="630" y1="258" x2="630" y2="300" class="hair"/>
+    <line x1="970" y1="258" x2="970" y2="300" class="hair"/>
+
+    <g aria-label="LIN 전원 커넥터">
+      <path d="M548 356H478V456H548" fill="#d6dcd7" stroke="#181a18" stroke-width="4"/>
+      <circle cx="504" cy="386" r="7" fill="#315d4b"/>
+      <circle cx="504" cy="416" r="7" fill="#4d7890"/>
+      <circle cx="504" cy="446" r="7" fill="#657069"/>
+      <text x="454" y="346" text-anchor="end" class="sans label">LIN·전원 커넥터</text>
+      <path d="M462 350H502" class="hair"/>
+    </g>
+
+    <g aria-label="제어 PCB">
+      <rect x="610" y="328" width="178" height="166" rx="6" fill="#dfeae3" stroke="#315d4b" stroke-width="3"/>
+      <rect x="638" y="360" width="74" height="58" rx="4" fill="#1e2924"/>
+      <text x="675" y="394" text-anchor="middle" class="mono" fill="#f7f7f5" font-size="15" font-weight="700">MCU</text>
+      <g fill="#315d4b">
+        <rect x="730" y="354" width="24" height="26" rx="2"/>
+        <rect x="730" y="387" width="24" height="26" rx="2"/>
+        <rect x="730" y="420" width="24" height="26" rx="2"/>
+        <rect x="730" y="453" width="24" height="26" rx="2"/>
+      </g>
+      <path d="M620 438H710M620 458H710" class="hair"/>
+      <text x="610" y="524" class="sans label">제어 PCB</text>
+      <text x="610" y="550" class="sans body">LIN · MCU · FET 출력</text>
+    </g>
+
+    <g aria-label="PMSM">
+      <circle cx="890" cy="386" r="92" fill="#ffffff" stroke="#181a18" stroke-width="4"/>
+      <circle cx="890" cy="386" r="38" fill="#e8f0eb" stroke="#315d4b" stroke-width="3"/>
+      <path d="M890 294V334M970 340L936 360M970 432L936 412M890 478V438M810 432L844 412M810 340L844 360" class="green"/>
+      <path d="M848 276C900 244 964 278 976 334" class="green" marker-end="url(#arrow-green)"/>
+      <text x="890" y="510" text-anchor="middle" class="sans label">PMSM</text>
+    </g>
+
+    <g aria-label="감속 기어와 출력축">
+      <circle cx="852" cy="546" r="43" fill="#ffffff" stroke="#181a18" stroke-width="4"/>
+      <circle cx="930" cy="550" r="56" fill="#e8f0eb" stroke="#315d4b" stroke-width="4"/>
+      <circle cx="852" cy="546" r="12" fill="#315d4b"/>
+      <circle cx="930" cy="550" r="15" fill="#315d4b"/>
+      <path d="M930 606V690" stroke="#181a18" stroke-width="16"/>
+      <path d="M930 606V690" stroke="#ffffff" stroke-width="6"/>
+      <text x="1030" y="550" class="sans label">감속 기어</text>
+      <path d="M990 546H1018" class="hair"/>
+      <text x="1030" y="650" class="sans label">밸브 출력축</text>
+      <path d="M946 646H1018" class="hair"/>
+    </g>
+  </g>
+
+  <g aria-label="밸브 바디와 두 냉매 유로">
+    <path d="M244 650H1356L1430 708V856L1356 914H244L170 856V708Z" fill="url(#metal)" stroke="#181a18" stroke-width="4"/>
+    <path d="M92 696H670C734 696 760 714 800 744C840 714 866 696 930 696H1508" stroke="#4d7890" stroke-width="54" opacity="0.18" fill="none"/>
+    <path d="M92 828H670C734 828 760 810 800 780C840 810 866 828 930 828H1508" stroke="#b4773d" stroke-width="54" opacity="0.18" fill="none"/>
+
+    <path d="M92 696H684" class="blue" marker-end="url(#arrow-blue)"/>
+    <path d="M916 696H1492" class="blue" marker-end="url(#arrow-blue)"/>
+    <path d="M92 828H684" class="amber" marker-end="url(#arrow-amber)"/>
+    <path d="M916 828H1492" class="amber" marker-end="url(#arrow-amber)"/>
+
+    <circle cx="800" cy="762" r="128" fill="#f7f7f5" stroke="#181a18" stroke-width="5"/>
+    <circle cx="800" cy="762" r="38" fill="#d6dcd7" stroke="#181a18" stroke-width="4"/>
+    <path d="M760 662L840 662L822 746L778 746Z" fill="#315d4b"/>
+    <path d="M778 778L822 778L850 874H750Z" fill="#315d4b"/>
+    <path d="M800 690V620" stroke="#181a18" stroke-width="16"/>
+    <path d="M800 690V620" stroke="#ffffff" stroke-width="6"/>
+    <path d="M734 622C758 594 806 586 840 604" class="green" marker-end="url(#arrow-green)"/>
+    <text x="700" y="594" text-anchor="end" class="sans label">회전각</text>
+
+    <path d="M670 696C734 696 760 714 800 744C840 714 866 696 930 696" class="blue"/>
+    <path d="M670 828C734 828 760 810 800 780C840 810 866 828 930 828" class="amber"/>
+
+    <text x="104" y="666" class="mono eyebrow">FLOW PATH A</text>
+    <text x="104" y="796" class="mono eyebrow" fill="#9b632f">FLOW PATH B</text>
+    <text x="1496" y="666" text-anchor="end" class="sans body">밸브 개도에 따라 유량 변화</text>
+    <text x="1496" y="796" text-anchor="end" class="sans body">밸브 개도에 따라 유량 변화</text>
+  </g>
+
+  <g aria-label="작동 설명">
+    <text x="64" y="928" class="sans label">PMSM 회전 → 감속 기어 → 출력축 → 밸브 회전</text>
+    <text x="1536" y="928" text-anchor="end" class="sans body">하나의 액추에이터가 두 유로의 개도를 바꿔 냉매 흐름을 조절</text>
+  </g>
+</svg>
