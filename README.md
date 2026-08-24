@@ -43,6 +43,6 @@ python -m http.server 5180 --bind 127.0.0.1
 - script.js: mobile menu and current section highlighting
 - data/career-public.json: 사이트에 노출하는 공개 프로필·경력·프로젝트 데이터
 - experience/: 회사별 실무 경험 상세 페이지와 공개용 시스템 개념도
-- projects/: MOBASE AUTOSAR 코드 생성 툴, MOBASE SiL 검증 환경, MOBASE CI 리포트 대시보드, K Stock, USED PICK, Virtual MCU, Jira Opsidian, Train Gallery, Questora, Codex Team, Auto Trading
+- projects/: MOBASE AUTOSAR 코드 생성 툴, MOBASE SiL 검증 환경, MOBASE CI 리포트 대시보드, K Stock, USED PICK, COTEEPET, Virtual MCU, Jira Opsidian, Train Gallery, Questora, Codex Team, Auto Trading
 - 각 프로젝트 상세 페이지는 프로젝트별 제목을 유지하면서 `Overview` → `Problem` → `Approach` → `Screen evidence` 순서로 구성합니다.
 - assets/: 실제 프로젝트 화면 캡처

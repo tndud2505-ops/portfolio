@@ -140,6 +140,15 @@
       "externalUrl": "https://www.used-pick.com/"
     },
     {
+      "id": "coteepet",
+      "name": "COTEEPET",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "Codex Pet 캐릭터를 검색·정렬하고 애니메이션 동작을 미리 본 뒤 업로드·찜·다운로드 흐름으로 연결한 웹 카탈로그",
+      "detailPath": "./projects/coteepet.html",
+      "externalUrl": "https://coteepet.com/"
+    },
+    {
       "id": "virtual-mcu",
       "name": "Virtual MCU Training Environment",
       "category": "product",
