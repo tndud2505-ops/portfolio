@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "lastVerified": "2026-08-06",
+  "lastVerified": "2026-08-26",
   "profile": {
     "name": "Kim Suyoung",
     "nameKo": "김수영",
@@ -147,6 +147,15 @@
       "description": "Codex Pet 캐릭터를 검색·정렬하고 애니메이션 동작을 미리 본 뒤 업로드·찜·다운로드 흐름으로 연결한 웹 카탈로그",
       "detailPath": "./projects/coteepet.html",
       "externalUrl": "https://coteepet.com/"
+    },
+    {
+      "id": "emotown",
+      "name": "EMOTOWN",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "이모티콘 묶음을 검색·카테고리·정렬로 탐색하고 좋아요·찜·무료 다운로드와 제작자 업로드를 연결한 공개 웹 서비스",
+      "detailPath": "./projects/emotown.html",
+      "externalUrl": "https://emotown.com/"
     },
     {
       "id": "virtual-mcu",
